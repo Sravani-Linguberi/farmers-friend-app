@@ -8,22 +8,24 @@ import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup;
-  constructor(private readonly fb: FormBuilder) {
-    this.form = this.fb.group({
-      userName:  ['', Validators.required],
-      phoneNumber:  ['', Validators.required],
+  userForm: any;
+  constructor(private formBuilder: FormBuilder) {
+    this.userForm=this.formBuilder.group({
+      userName: ['',Validators.required,Validators.minLength(8)],
+      phoneNumber: ['',[Validators.required,Validators.minLength(10)]],
+      EnterOTP: ['',Validators.required]
     });
    }
-   submitForm() {
-    if (this.form.valid) {
-      console.log(this.form.getRawValue());
-  } else {
-      console.log('There is a problem with the form');
+saveUser()
+{
+  if(this.userForm.dirty && this.userForm.valid){
+    alert(
+      `userName: ${this.userForm.value.name} phoneNumber: ${this.userForm.value.phoneNumber}`
+    );
   }
-  }
-
+}
   ngOnInit(): void {
   }
+
 
 }
