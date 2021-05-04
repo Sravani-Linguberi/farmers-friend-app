@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import "../../../assets/images/contact.jpeg"
 
 @Component({
   selector: 'app-contact-us',
