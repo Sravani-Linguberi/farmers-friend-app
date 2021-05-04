@@ -1,6 +1,6 @@
+import { RegisterService } from './../../register.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
-
+import {register} from '../../register';
 
 
 @Component({
@@ -9,23 +9,27 @@ import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms'
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-userForm: any;
-  constructor(private formBuilder: FormBuilder) {
-    this.userForm=this.formBuilder.group({
-      userName: ['',Validators.required,Validators.minLength(8)],
-      phoneNumber: ['',[Validators.required,Validators.minLength(10)]],
-      EnterOTP: ['',Validators.required]
-    });
+  register:any;
+  FullName?:string;
+  phoneNumber?:number;
+
+ constructor(private RegisterService: RegisterService) {}
+ addregister()
+ {
+   const newregister={
+     FullName:this.FullName,
+     phoneNumber:this.phoneNumber
    }
-saveUser()
-{
-  if(this.userForm.dirty && this.userForm.valid){
-    alert(
-      `userName: ${this.userForm.value.name} phoneNumber: ${this.userForm.value.phoneNumber}`
-    );
-  }
-}
+   this.RegisterService.addregister(newregister)
+   .subscribe(register =>{
+     this.register.push(register);
+     this.RegisterService.getregister()
+    .subscribe(register =>
+      this.register=register)
+   })
+ }
   ngOnInit(): void {
+
   }
 
 }

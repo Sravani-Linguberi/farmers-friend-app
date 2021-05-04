@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { RegisterService } from './register.service';
 import { ValidationService } from './validation.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,7 +12,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [ValidationService],
+  providers: [ValidationService,RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
