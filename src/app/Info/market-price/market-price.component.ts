@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarketPriceComponent implements OnInit {
 
-
+  config:any;
   title = "Market-Price-Info" ;
    data : any ;
   records: any[] = [] ;
@@ -17,6 +17,17 @@ export class MarketPriceComponent implements OnInit {
 
   constructor(private InfoService : InfoService) {
   this.getDataFromAPI()
+
+  this.config={
+    itemsPerPage:20,
+    currentPage:1,
+    totalItems:this.records.length
+
+  }
+}
+
+public pageChanged(event:any):void{
+  this.config.currentPage=event;
 }
 
 

@@ -11,7 +11,7 @@ export class InfoService {
   constructor(private HttpClient : HttpClient ) { }
 
   public getData(query:string):Observable<any[]>{
-    return this.HttpClient.get<any[]>(`https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd00000182ff88f640e24d6b7225d126eee9389d&format=json&offset=0&limit=100`).pipe(
+    return this.HttpClient.get<any[]>(`https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd00000182ff88f640e24d6b7225d126eee9389d&format=json&offset=0&limit=10000`).pipe(
       catchError(this.handleError)
     )
   }
