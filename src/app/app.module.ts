@@ -18,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
 import { HttpClientModule } from '@angular/common/http';
-//import {NgxPaginationModule} from 'ngx-pagination';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 
@@ -37,12 +37,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     HttpClientModule,
-  //  NgxPaginationModule,
+    NgxPaginationModule,
     ReactiveFormsModule
 
   ],
