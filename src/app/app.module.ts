@@ -10,6 +10,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
+import { HttpClientModule } from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { MarketPriceComponent } from './Info/market-price/market-price.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
 
 const routes: Routes = [
-
-{path:'price' , component: MarketPriceComponent },
-
-
+  { path: 'contact', component: ContactUsComponent },
+  {path: 'price' , component:  MarketPriceComponent}
 ];
 
 @NgModule({
