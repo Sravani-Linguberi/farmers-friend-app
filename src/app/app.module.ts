@@ -2,6 +2,7 @@ import { ValidationService } from './validation.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -11,6 +12,10 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +25,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomePageComponent,
     ContactUsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    // MatButtonModule,
+    MaterialModule
   ],
   providers: [ValidationService],
   bootstrap: [AppComponent]
