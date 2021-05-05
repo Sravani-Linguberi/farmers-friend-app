@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 
 
 
@@ -32,7 +33,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ContactUsComponent,
     HeaderComponent,
     FooterComponent,
-    MarketPriceComponent
+    MarketPriceComponent,
+    SoilInfoComponent
   ],
   imports: [
     BrowserModule,
