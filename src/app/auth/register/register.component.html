@@ -9,14 +9,14 @@
       <label>phoneNumber</label>
       <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" required>
       <br><br>
-<label for="EnterOTP"><h4>Enter OTP:</h4></label>
+ <label for="EnterOTP"><h4>Enter OTP:</h4></label>
 <br>
   <input formControlName="EnterOTP" id="EnterOTP" />
 
 <button style="margin-left: 5px;" class="btn btn-danger" type="submit" >Verify</button><br><br>
     </div>
 
-    <button type="submit" class="btn btn-primary" ><h4>SignUp</h4></button>
+    <button type="submit" class="btn btn-primary" value="Add" >Signup</button>
 
   </form>
 </div>
@@ -31,14 +31,8 @@
     <div class="col-md-3">
       {{register.phoneNumber}
 </div>
+ </div>
 
-<app-footer></app-footer>
-
-
-    </div>
-    <div class="col-md-3">
-      <input type="button">
-    </div>
   </div>
 
 

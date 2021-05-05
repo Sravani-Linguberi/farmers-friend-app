@@ -21,4 +21,5 @@ export class RegisterService {
     headers.append('register-Type','application/json');
     return this.httpclient.post<any>('http://localhost:3000/api/register',newregister,{headers:headers})
   }
+
 }

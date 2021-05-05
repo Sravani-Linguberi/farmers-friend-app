@@ -27,6 +27,7 @@ export class RegisterComponent implements OnInit {
     .subscribe(register =>
       this.register=register)
    })
+
  }
   ngOnInit(): void {
 
