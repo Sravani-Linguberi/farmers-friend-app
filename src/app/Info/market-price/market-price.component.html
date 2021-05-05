@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div style= "background-image: url()  ; background-position: auto; ">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <select name="cars" id="sortBy">
+  <option value="state">state</option>
+  <option value="district">district</option>
+ <option value="commodity">commodity</option>
+ <option value="variety">variety</option>
+ <option value="arrival_date">arrival date</option>
+ <option value="min_price">min price</option>
+ <option value="max_price">max price</option>
+ </select>
+ <button type="submit" (click)="sortData()">Submit</button>
+ <!-- <Style>
+   body{
+   background-image: url(https://images.pexels.com/photos/1686/nature-field-forest-agriculture.jpg?cs=srgb&dl=pexels-splitshire-1686.jpg&fm=jpg) ;
+   } -->
+ <!-- </Style> -->
+ <div class="container mt-5" >
+   <!-- <div class="card" id="mycard" style="padding: 5px;"> -->
+      <div class="row">
+          <div class="col-lg-4" *ngFor="let d of records| paginate: config">
+          
+          <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
+                         state: {{d.state}}<br>
+                         district: {{d.district}}<br>
+                         market: {{d.market}}<br>
+                         commodity :{{d.commodity}}<br>
+                         variety: {{d.variety}}<br>
+                         arrival_date: {{d.arrival_date}}<br>
+                         min_price: {{d.min_price}}<br>
+                         max_price: {{d.max_price}} <br>
+
+                </div>
+
+             </div>
+
+           </div>
+
+         </div>
+         <div style="text-align: center;">
+          <pagination-controls  (pageChange)="pageChanged($event)"></pagination-controls>
+        </div>
+
+  </div>
+
+
+
+<app-footer></app-footer>
