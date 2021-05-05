@@ -9,7 +9,7 @@ export class LoginService {
   constructor(private httpclient: HttpClient) { }
   getregister()
   {
-    return this.httpclient.get<any>('http://localhost:3000/api/register')
+    return this.httpclient.get<any>('http://localhost:3000/api/login')
 
   }
   // add registration details
@@ -17,6 +17,6 @@ export class LoginService {
   {
     var headers=new HttpHeaders();
     headers.append('login-Type','application/json');
-    return this.httpclient.post<any>('http://localhost:3000/api/register',newlogin,{headers:headers})
+    return this.httpclient.post<any>('http://localhost:3000/api/login',newlogin,{headers:headers})
   }
 }

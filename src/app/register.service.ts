@@ -21,4 +21,7 @@ export class RegisterService {
     headers.append('register-Type','application/json');
     return this.httpclient.post<any>('http://localhost:3000/api/register',newregister,{headers:headers})
   }
+      getOtp(phoneNumber:any){
+        return this.httpclient.get<any>(`http://localhost:3000/register?phoneNumber=${phoneNumber}`)
+      }
 }
