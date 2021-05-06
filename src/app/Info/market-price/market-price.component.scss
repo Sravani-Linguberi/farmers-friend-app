@@ -1,0 +1,45 @@
+.body-container{
+
+background-image: url(../../../assets/images/info_background_photo.jpeg);
+background-repeat:no-repeat;
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.optionSector{
+
+  width: 10%;
+  border: 2px solid black;
+  margin-top: 0.5px;
+}
+
+#hello{
+  opacity: 0.5%;
+
+  background: cadetblue;
+  border-radius: 5px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom,rgb(147, 238, 147), rgb(238, 118, 118));
+
+
+}
+#hello:hover {
+ border: 5px solid black;
+background-color: lightcyan;
+}
+.headLine{
+  width: 70%;
+  height: 10%;
+  text-align: center;
+   color: black;
+   background: linear-gradient(to left,rgb(126, 233, 126) , rgb(3, 66, 3));
+   margin-left:15%;
+   border:  2px black solid;
+   border-radius: 2%;
+}
+
+

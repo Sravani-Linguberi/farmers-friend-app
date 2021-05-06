@@ -6,11 +6,16 @@ import { MarketPriceComponent } from './Info/market-price/market-price.component
 
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
 {path: 'register' ,component: RegisterComponent},
-{path: 'login',component:LoginComponent},
-{path: 'price' , component:  MarketPriceComponent}];
+  { path: 'login', component: LoginComponent },
+  { path: 'home-page', component: HomePageComponent },
+  {path: 'price' , component:  MarketPriceComponent},
+  {path: '', redirectTo: '/home-page', pathMatch: 'full'},
+  
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

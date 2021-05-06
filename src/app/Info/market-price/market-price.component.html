@@ -1,7 +1,24 @@
 <app-header></app-header>
-<div style= "background-image: url()  ; background-position: auto; ">
+<div class="body-container">
+<!-- <div style= "background-image: url()  ; background-position: auto; "></div> -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <select name="cars" id="sortBy">
+
+
+
+
+<select class="form-select optionSector" id="sortBy" aria-label="Default select example">
+  <option selected>State</option>
+  <option value="district">district</option>
+ <option value="commodity">commodity</option>
+ <option value="variety">variety</option>
+ <option value="arrival_date">arrival date</option>
+ <option value="min_price">min price</option>
+ <option value="max_price">max price</option>
+</select>
+<button type="button" (click)="sortData()" class="btn btn-primary btn-sm" style="border: 2px solid black; margin-left: 2px;">Submit</button>
+
+
+<!-- <select name="cars" id="sortBy">
   <option value="state">state</option>
   <option value="district">district</option>
  <option value="commodity">commodity</option>
@@ -10,26 +27,24 @@
  <option value="min_price">min price</option>
  <option value="max_price">max price</option>
  </select>
- <button type="submit" (click)="sortData()">Submit</button>
- <!-- <Style>
-   body{
-   background-image: url(https://images.pexels.com/photos/1686/nature-field-forest-agriculture.jpg?cs=srgb&dl=pexels-splitshire-1686.jpg&fm=jpg) ;
-   } -->
- <!-- </Style> -->
+ <button type="submit" (click)="sortData()">Submit</button> -->
+ <div class="headLine">
+ <h1 style="text-align: center;">AVAILABE MARKET FOR YOUR CROP </h1>
+</div>
  <div class="container mt-5" >
    <!-- <div class="card" id="mycard" style="padding: 5px;"> -->
       <div class="row">
           <div class="col-lg-4" *ngFor="let d of records| paginate: config">
-          
+
           <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
-                         state: {{d.state}}<br>
-                         district: {{d.district}}<br>
-                         market: {{d.market}}<br>
-                         commodity :{{d.commodity}}<br>
-                         variety: {{d.variety}}<br>
-                         arrival_date: {{d.arrival_date}}<br>
-                         min_price: {{d.min_price}}<br>
-                         max_price: {{d.max_price}} <br>
+                       <h4>  state: {{d.state}}<br></h4>
+                       <h4>district: {{d.district}}<br></h4>
+                       <h4>market: {{d.market}}<br></h4>
+                       <h4>commodity :{{d.commodity}}<br></h4>
+                       <h4>variety: {{d.variety}}<br></h4>
+                       <h4>arrival_date: {{d.arrival_date}}<br></h4>
+                       <h4>min_price: {{d.min_price}}<br></h4>
+                       <h4>max_price: {{d.max_price}} <br></h4>
 
                 </div>
 
@@ -38,7 +53,7 @@
            </div>
 
          </div>
-         <div style="text-align: center;">
+         <div style="text-align: center; color: azure; margin-top: 5px;">
           <pagination-controls  (pageChange)="pageChanged($event)"></pagination-controls>
         </div>
 

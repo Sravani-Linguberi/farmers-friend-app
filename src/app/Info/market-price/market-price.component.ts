@@ -19,7 +19,7 @@ export class MarketPriceComponent implements OnInit {
   this.getDataFromAPI()
 
   this.config={
-    itemsPerPage:20,
+    itemsPerPage:18,
     currentPage:1,
     totalItems:this.records.length
 
