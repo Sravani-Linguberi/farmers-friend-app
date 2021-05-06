@@ -19,6 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { AdminComponent } from './auth/admin/admin.component';
+import { AdminService } from './admin.service';
 
 
 
@@ -32,7 +34,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ContactUsComponent,
     HeaderComponent,
     FooterComponent,
-    MarketPriceComponent
+    MarketPriceComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ReactiveFormsModule
 
   ],
-  providers: [ValidationService,RegisterService],
+  providers: [ValidationService,RegisterService,AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
