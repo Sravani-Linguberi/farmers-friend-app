@@ -55,7 +55,7 @@ public getDataFromAPI(){
 
   sortData(){
     var value = document.getElementById("sortBy") as HTMLSelectElement ;
-    var query = "Gujrat"
+    var query = "Gujarat"
     query = value.value ;
     //var value = "bihar";
       this.filterData = this.records.filter(el=>el.state == query)
