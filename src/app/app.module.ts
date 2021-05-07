@@ -21,6 +21,11 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { AdminComponent } from './auth/admin/admin.component';
 import { AdminService } from './admin.service';
 import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
+import { AdminHeaderComponent } from './auth/admin-header/admin-header.component';
+import { PostHelplinesComponent } from './posts/post-helplines/post-helplines.component';
+import { PostCropsComponent } from './posts/post-crops/post-crops.component';
+import { PostAddressComponent } from './posts/post-address/post-address.component';
+import { EnquiryComponent } from './posts/enquiry/enquiry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +39,11 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
     AdminComponent,
     MarketPriceComponent,
     SoilInfoComponent,
+    AdminHeaderComponent,
+    PostHelplinesComponent,
+    PostCropsComponent,
+    PostAddressComponent,
+    EnquiryComponent,
    ],
   imports: [
     BrowserModule,
