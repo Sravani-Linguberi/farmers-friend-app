@@ -1,11 +1,10 @@
+import { InfoService } from './Info/market-price/info.service';
+import { SoilSchemaService } from './soil-schema.service';
 import { LoginService } from './login.service';
-
 import { RegisterService } from './register.service';
 import { ValidationService } from './validation.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -15,23 +14,13 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AdminComponent } from './auth/admin/admin.component';
 import { AdminService } from './admin.service';
 import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,26 +34,23 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
     AdminComponent,
     MarketPriceComponent,
     SoilInfoComponent,
-
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-
     BrowserAnimationsModule,
-   
-
-    FormsModule,
+     FormsModule,
     HttpClientModule,
     HttpClientModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
 
 
   ],
-  providers: [ValidationService,RegisterService,LoginService,AdminService],
-  
+  providers: [InfoService,ValidationService,RegisterService,LoginService,AdminService , SoilSchemaService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 import { AdminComponent } from './auth/admin/admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NgModule, Component } from '@angular/core';
@@ -15,8 +16,9 @@ const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
   { path: 'home-page', component: HomePageComponent },
   {path: 'admin' , component:  AdminComponent},
   {path: 'price' , component:  MarketPriceComponent},
+  {path: 'address' , component: SoilInfoComponent},
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
-  
+
 ];
 
 @NgModule({
