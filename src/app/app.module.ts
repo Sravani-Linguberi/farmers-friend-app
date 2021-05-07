@@ -1,3 +1,4 @@
+import { LoginService } from './login.service';
 
 import { RegisterService } from './register.service';
 import { ValidationService } from './validation.service';
@@ -64,7 +65,7 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 
 
   ],
-  providers: [ValidationService,RegisterService],
+  providers: [ValidationService,RegisterService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

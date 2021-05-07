@@ -1,10 +1,7 @@
+<app-header></app-header>
 <div class="container">
   <h2 class="page-header">Login Page</h2>
   <form (submit)="addlogin()">
-     <div class="form-group">
-      <label>FullName</label>
-      <input type="text"  [(ngModel)]="FullName" name="FullName" class="form-control" required>
-    </div>
     <div class="form-group">
       <label>phoneNumber</label>
       <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" required>
@@ -22,19 +19,6 @@
 </div>
 <hr>
 
-<div class="container">
-  <div *ngFor="let login of login">
-    <div class="col-md-3">
-      {{login.FullName}}
-    </div>
-    <div class="col-md-3">
-      {{login.phoneNumber}}
-
-    </div>
-    <div class="col-md-3">
-      <input type="button">
-    </div>
-  </div>
+<app-footer></app-footer>
 
 
-</div>

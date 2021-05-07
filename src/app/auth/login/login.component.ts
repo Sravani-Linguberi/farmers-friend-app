@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
   addlogin()
   {
     const newlogin={
-      FullName:this.FullName,
       phoneNumber:this.phoneNumber
     }
     this.loginService.addregister(newlogin)

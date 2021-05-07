@@ -1,15 +1,15 @@
+<app-header></app-header>
 <div class="container">
   <h2 class="page-header">Signup</h2>
-  <!-- <form (submit)="addregister()"> -->
+  <form (submit)="addregister()">
     <div class="form-group">
       <label>FullName</label>
       <input type="text"  [(ngModel)]="FullName" name="FullName" class="form-control" required>
     </div>
     <div class="form-group">
       <label>phoneNumber</label>
-      <input type="text" #phoneNumber name="phoneNumber" class="form-control" required>
+      <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" required>
       <br><br>
-      <button style="margin-left: 5px;" class="btn btn-danger" type="submit" (click)="getOTP(phoneNumber.value)" >Get OTP</button><br><br>
  <label for="EnterOTP"><h4>Enter OTP:</h4></label>
 <br>
   <input formControlName="EnterOTP" id="EnterOTP" />
@@ -19,7 +19,7 @@
 
     <button type="submit" class="btn btn-primary" value="Add" >Signup</button>
 
-  <!-- </form> -->
+  </form>
 </div>
 
 <hr>
@@ -36,6 +36,7 @@
 
   </div>
 
+  <app-footer></app-footer>
 
 
 

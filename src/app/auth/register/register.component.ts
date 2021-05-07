@@ -11,34 +11,24 @@ import {register} from '../../register';
 export class RegisterComponent implements OnInit {
   register:any;
   FullName?:string;
-  phoneNumber?:string;
-  data:any;
+  phoneNumber?:number;
 
- constructor(private registerService: RegisterService) {}
+ constructor(private RegisterService: RegisterService) {}
  addregister()
  {
    const newregister={
      FullName:this.FullName,
      phoneNumber:this.phoneNumber
    }
-   this.registerService.addregister(newregister)
+   this.RegisterService.addregister(newregister)
    .subscribe(register =>{
      this.register.push(register);
-     this.registerService.getregister()
+     this.RegisterService.getregister()
     .subscribe(register =>
       this.register=register)
    })
-
+   console.log(this.FullName);
  }
- getOTP(phoneNumber:string){
-   console.log("INgetotp");
-   console.log(phoneNumber);
-   this.registerService.getOtp(phoneNumber)
-   .subscribe(response=>
-     console.log(response)
-
-   )
-  }
   ngOnInit(): void {
 
   }

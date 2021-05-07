@@ -14,7 +14,7 @@ export class MarketPriceComponent implements OnInit {
   records: any[] = [] ;
   totalRecords : any ;
   page : number = 1 ;
-
+  filterData:any[] =[];
   constructor(private InfoService : InfoService) {
   this.getDataFromAPI()
 
@@ -38,9 +38,10 @@ public getDataFromAPI(){
       this.data = res ;
       this.records = this.data.records ;
       this.totalRecords = res.length  ;
-      console.log(this.data)
+      this.filterData = this.records.filter(el=>el.state == "Gujarat")
+      
     },
-    (err)=>{
+    (err:any)=>{
       console.log(err);
     }
 
@@ -48,21 +49,28 @@ public getDataFromAPI(){
 }
 
   ngOnInit(): void {
+    
   }
 
 
   sortData(){
     var value = document.getElementById("sortBy") as HTMLSelectElement ;
-    var query = value.value ;
-    this.InfoService.getData(query).subscribe(
-    (res) =>{
+    var query = "Gujrat"
+    query = value.value ;
+    //var value = "bihar";
+      this.filterData = this.records.filter(el=>el.state == query)
+      console.log(this.filterData)
+  //   this.InfoService.getData(query).subscribe(
+  //   (res) =>{
 
-      this.data = res ;
-      console.log(this.data)
-    },
-    (err)=>{
-      console.log(err);
-    }
-  )
+  //     this.data = res ;
+  //     console.log(this.data)
+  //   },
+  //   (err)=>{
+  //     console.log(err);
+  //   }
+  // )
 }
+ 
+
 }
