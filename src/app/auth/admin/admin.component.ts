@@ -7,7 +7,8 @@ import{admin} from '../../admin';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-
+userName:any
+password:any
   constructor(private AdminService: AdminService) { }
   getadmin()
   {
