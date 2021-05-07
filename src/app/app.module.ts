@@ -25,6 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { AdminComponent } from './auth/admin/admin.component';
+import { AdminService } from './admin.service';
 import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 
 
@@ -39,14 +41,10 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
     ContactUsComponent,
     HeaderComponent,
     FooterComponent,
-
+    MarketPriceComponent,
+    AdminComponent,
     MarketPriceComponent,
     SoilInfoComponent,
-
-
-
-
-    MarketPriceComponent
 
   ],
   imports: [
@@ -65,7 +63,8 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 
 
   ],
-  providers: [ValidationService,RegisterService,LoginService],
+  providers: [ValidationService,RegisterService,LoginService,AdminService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
