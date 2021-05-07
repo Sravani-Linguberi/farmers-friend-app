@@ -1,3 +1,5 @@
+import { SchemesComponent } from './schemes/schemes.component';
+import { HelplinesComponent } from './helplines/helplines.component';
 import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 import { AdminComponent } from './auth/admin/admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -17,6 +19,8 @@ const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
   {path: 'admin' , component:  AdminComponent},
   {path: 'price' , component:  MarketPriceComponent},
   {path: 'address' , component: SoilInfoComponent},
+  {path : 'helplines' , component: HelplinesComponent },
+  {path : 'Scheme' ,  component : SchemesComponent},
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
 
 ];

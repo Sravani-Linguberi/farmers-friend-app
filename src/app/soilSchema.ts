@@ -11,6 +11,4 @@ Soil_Equipment : any
 Soil_Test_No : any
 Fax : any
 Other_information : any
-
-
 }

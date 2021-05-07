@@ -1,3 +1,5 @@
+import { SchemesService } from './schemes.service';
+import { HelplinesService } from './helplines.service';
 import { InfoService } from './Info/market-price/info.service';
 import { SoilSchemaService } from './soil-schema.service';
 import { LoginService } from './login.service';
@@ -21,6 +23,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { AdminComponent } from './auth/admin/admin.component';
 import { AdminService } from './admin.service';
 import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
+import { HelplinesComponent } from './helplines/helplines.component';
+import { SchemesComponent } from './schemes/schemes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +38,8 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
     AdminComponent,
     MarketPriceComponent,
     SoilInfoComponent,
+    HelplinesComponent,
+    SchemesComponent,
    ],
   imports: [
     BrowserModule,
@@ -49,7 +55,9 @@ import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
 
 
   ],
-  providers: [InfoService,ValidationService,RegisterService,LoginService,AdminService , SoilSchemaService],
+  providers: [InfoService,ValidationService,
+              RegisterService,LoginService,AdminService  ,
+               HelplinesService, SchemesService ,SoilSchemaService],
 
   bootstrap: [AppComponent]
 })
