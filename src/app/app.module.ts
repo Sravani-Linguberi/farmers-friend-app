@@ -1,3 +1,6 @@
+import { MandiService } from './mandi.service';
+import { SchemesComponent } from './schemes/schemes.component';
+import { HelplinesComponent } from './helplines/helplines.component';
 import { SchemesService } from './schemes.service';
 import { HelplinesService } from './helplines.service';
 import { InfoService } from './Info/market-price/info.service';
@@ -28,6 +31,7 @@ import { PostHelplinesComponent } from './posts/post-helplines/post-helplines.co
 import { PostCropsComponent } from './posts/post-crops/post-crops.component';
 import { PostAddressComponent } from './posts/post-address/post-address.component';
 import { EnquiryComponent } from './posts/enquiry/enquiry.component';
+import { MandiComponent } from './Soil/mandi/mandi.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +50,9 @@ import { EnquiryComponent } from './posts/enquiry/enquiry.component';
     PostCropsComponent,
     PostAddressComponent,
     EnquiryComponent,
+    HelplinesComponent,
+    SchemesComponent,
+    MandiComponent
    ],
   imports: [
     BrowserModule,
@@ -63,7 +70,7 @@ import { EnquiryComponent } from './posts/enquiry/enquiry.component';
   ],
   providers: [InfoService,ValidationService,
               RegisterService,LoginService,AdminService  ,
-               HelplinesService, SchemesService ,SoilSchemaService],
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService],
 
   bootstrap: [AppComponent]
 })

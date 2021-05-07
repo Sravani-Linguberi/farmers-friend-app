@@ -1,3 +1,4 @@
+import { MandiComponent } from './Soil/mandi/mandi.component';
 import { SchemesComponent } from './schemes/schemes.component';
 import { HelplinesComponent } from './helplines/helplines.component';
 import { SoilInfoComponent } from './Soil/soil-info/soil-info.component';
@@ -21,6 +22,7 @@ const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
   {path: 'address' , component: SoilInfoComponent},
   {path : 'helplines' , component: HelplinesComponent },
   {path : 'Scheme' ,  component : SchemesComponent},
+  {path: 'mandi' , component: MandiComponent},
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
 
 ];
