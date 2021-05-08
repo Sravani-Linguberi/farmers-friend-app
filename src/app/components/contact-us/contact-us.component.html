@@ -1,27 +1,26 @@
-<app-header></app-header>
+<app-admin-header></app-admin-header>
 <div class="container">
-  <form action="">
+    <h2 class="page-header">CONTACT US</h2>
+    <form>
+      <div class="form-group">
+        <label>FULLNAME</label>
+        <input type="text"  [(ngModel)]="Fullname" name="Fullname" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>TOPIC</label>
+        <input type="text"  [(ngModel)]="Topic" name="Topic" class="form-control" required>
+      </div>
+       <br><br>
+       <div class="form-group">
+        <label>DETAILS</label>
+        <input type="text"  [(ngModel)]="Details" name="Details" class="form-control" required>
+      </div>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <a type="submit" class="btn btn-primary" value="Add"  (click)="addcontacUs()" href="contactUs">SUBMIT</a>
 
-    <label for="Topic">Topic</label>
-    <select id="Topic" name="Topic">
-      <option value="Schemes">Schemes</option>
-      <option value="Market Price">Market Price</option>
-      <option value="Address">Address</option>
-      <option value="Helplines">Helplines</option>
-      <option value="Crops">Crops</option>
-    </select>
+     </form>
+  </div>
 
-    <label for="Details">Details</label>
-    <textarea id="Details" name="Details" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-
-  </form>
-</div>
+  <hr>
 <app-footer></app-footer>
