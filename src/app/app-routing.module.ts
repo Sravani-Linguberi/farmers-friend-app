@@ -1,3 +1,4 @@
+import { AddressComponent } from './Soil/address/address.component';
 import { MandiComponent } from './Soil/mandi/mandi.component';
 import { SchemesComponent } from './schemes/schemes.component';
 import { HelplinesComponent } from './helplines/helplines.component';
@@ -19,7 +20,7 @@ const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
   { path: 'home-page', component: HomePageComponent },
   {path: 'admin' , component:  AdminComponent},
   {path: 'price' , component:  MarketPriceComponent},
-  {path: 'address' , component: SoilInfoComponent},
+  {path: 'address' , component: AddressComponent},
   {path : 'helplines' , component: HelplinesComponent },
   {path : 'Scheme' ,  component : SchemesComponent},
   {path: 'mandi' , component: MandiComponent},
