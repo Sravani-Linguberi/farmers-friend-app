@@ -60,7 +60,8 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
     AddressComponent,
     // SoilComponent,
     PostSoilComponent,
-    PostMandiComponent
+    PostMandiComponent,
+    AddressComponent
    ],
   imports: [
     BrowserModule,
