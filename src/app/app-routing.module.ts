@@ -1,4 +1,5 @@
 import { AddressComponent } from './Soil/address/address.component';
+import { PostHelplinesComponent } from './posts/post-helplines/post-helplines.component';
 import { MandiComponent } from './Soil/mandi/mandi.component';
 import { SchemesComponent } from './schemes/schemes.component';
 import { HelplinesComponent } from './helplines/helplines.component';
@@ -24,7 +25,10 @@ const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
   {path : 'helplines' , component: HelplinesComponent },
   {path : 'Scheme' ,  component : SchemesComponent},
   {path: 'mandi' , component: MandiComponent},
+  {path: 'addHelplines' , component : PostHelplinesComponent},
+  {path: 'post-helpline' ,  component : PostHelplinesComponent},
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
+
 
 ];
 

@@ -9,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class HelplinesComponent implements OnInit {
 
 
-
+  helplines:any;
   config:any;
-  title = "Market-Price-Info" ;
+  title : any ;
+  details :any
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;
@@ -74,7 +75,6 @@ public getDataFromAPI(){
 //   //   }
 //   // )
 // }
-
 
 }
 

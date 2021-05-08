@@ -33,6 +33,9 @@ import { PostAddressComponent } from './posts/post-address/post-address.componen
 import { EnquiryComponent } from './posts/enquiry/enquiry.component';
 import { MandiComponent } from './Soil/mandi/mandi.component';
 import { AddressComponent } from './Soil/address/address.component';
+// import { SoilComponent } from './posts/soil/soil.component';
+import { PostSoilComponent } from './posts/post-soil/post-soil.component';
+import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +57,10 @@ import { AddressComponent } from './Soil/address/address.component';
     HelplinesComponent,
     SchemesComponent,
     MandiComponent,
-    AddressComponent
+    AddressComponent,
+    // SoilComponent,
+    PostSoilComponent,
+    PostMandiComponent
    ],
   imports: [
     BrowserModule,
