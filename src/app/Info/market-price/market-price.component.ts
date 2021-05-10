@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarketPriceComponent implements OnInit {
 
+  public title ="MARKET-INFORMATION"
   config:any;
-  title = "Market-Price-Info" ;
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;
@@ -19,7 +19,7 @@ export class MarketPriceComponent implements OnInit {
   this.getDataFromAPI()
 
   this.config={
-    itemsPerPage:18,
+    itemsPerPage:15,
     currentPage:1,
     totalItems:this.records.length
 
@@ -39,7 +39,7 @@ public getDataFromAPI(){
       this.records = this.data.records ;
       this.totalRecords = res.length  ;
       this.filterData = this.records.filter(el=>el.state == "Gujarat")
-      
+
     },
     (err:any)=>{
       console.log(err);
@@ -49,7 +49,7 @@ public getDataFromAPI(){
 }
 
   ngOnInit(): void {
-    
+
   }
 
 
@@ -71,6 +71,6 @@ public getDataFromAPI(){
   //   }
   // )
 }
- 
+
 
 }
