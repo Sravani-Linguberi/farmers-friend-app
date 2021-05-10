@@ -1,5 +1,7 @@
 import { CropComponent } from './crop/crop.component';
 import { AddressComponent } from './Soil/address/address.component';
+import { EnquiryComponent } from './posts/enquiry/enquiry.component';
+import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostHelplinesComponent } from './posts/post-helplines/post-helplines.component';
 import { MandiComponent } from './Soil/mandi/mandi.component';
 import { SchemesComponent } from './schemes/schemes.component';
@@ -16,6 +18,8 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AuthGuard } from './guard/auth.guard';
+import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
+import { combineAll } from 'rxjs/operators';
 
 const routes: Routes = [
   
@@ -35,6 +39,18 @@ const routes: Routes = [
   {path: 'admin' , component:  AdminComponent},
 
   
+  {path: 'price' , component:  MarketPriceComponent},
+  {path: 'address' , component: SoilInfoComponent},
+  {path : 'helplines' , component: HelplinesComponent },
+  {path : 'Scheme' ,  component : SchemesComponent},
+  {path: 'mandi' , component: MandiComponent},
+  {path: 'addHelplines' , component : PostHelplinesComponent},
+  {path: 'post-helpline' ,  component : PostHelplinesComponent},
+  {path: 'post-soil', component : PostSoilComponent},
+  {path: 'post-mandi' ,  component : PostMandiComponent},
+  {path: 'contactUs' , component : ContactUsComponent},
+  {path : 'enquiry' , component : EnquiryComponent} ,
+  {path: '', redirectTo: '/home-page', pathMatch: 'full'},
 
 
 ];

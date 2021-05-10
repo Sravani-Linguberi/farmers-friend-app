@@ -1,6 +1,7 @@
 import { TokenInterceptorService } from './token-interceptor.service';
 import { AuthGuard } from './guard/auth.guard';
 import { UserRequestInterceptor } from './auth/user.request.interceptor';
+import { ContactUsService } from './contact-us.service';
 import { MandiService } from './mandi.service';
 import { SchemesComponent } from './schemes/schemes.component';
 import { HelplinesComponent } from './helplines/helplines.component';
@@ -90,7 +91,8 @@ import { CropComponent } from './crop/crop.component';
       multi: true
     },
               RegisterService,LoginService,AdminService  ,
-               HelplinesService, SchemesService ,SoilSchemaService , MandiService,AuthGuard],
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService,AuthGuard,
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService, ContactUsService],
 
   bootstrap: [AppComponent]
 })

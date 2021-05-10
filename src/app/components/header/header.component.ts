@@ -1,7 +1,9 @@
 import { Router } from '@angular/router';
 //import { register } from './../../register';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RegisterService } from 'src/app/register.service';
+
+
 
 @Component({
   selector: 'app-header',
@@ -11,6 +13,9 @@ import { RegisterService } from 'src/app/register.service';
 export class HeaderComponent implements OnInit {
 
   constructor(public authService: RegisterService,private router:Router) { }
+   @Input() public title : string = "";
+
+  
 
   ngOnInit() {
   }
@@ -19,5 +24,8 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('token')
     this.router.navigate(['/login'])
   }
+
+
+
 
 }
