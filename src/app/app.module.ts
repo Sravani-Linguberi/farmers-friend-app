@@ -1,3 +1,4 @@
+import { ContactUsService } from './contact-us.service';
 import { MandiService } from './mandi.service';
 import { SchemesComponent } from './schemes/schemes.component';
 import { HelplinesComponent } from './helplines/helplines.component';
@@ -76,7 +77,7 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
   ],
   providers: [InfoService,ValidationService,
               RegisterService,LoginService,AdminService  ,
-               HelplinesService, SchemesService ,SoilSchemaService , MandiService],
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService, ContactUsService],
 
   bootstrap: [AppComponent]
 })
