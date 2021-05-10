@@ -1,3 +1,4 @@
+import { EnquiryComponent } from './posts/enquiry/enquiry.component';
 import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostHelplinesComponent } from './posts/post-helplines/post-helplines.component';
 import { MandiComponent } from './Soil/mandi/mandi.component';
@@ -15,6 +16,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
+import { combineAll } from 'rxjs/operators';
 
 const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
 {path: 'register' ,component: RegisterComponent},
@@ -31,6 +33,7 @@ const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
   {path: 'post-soil', component : PostSoilComponent},
   {path: 'post-mandi' ,  component : PostMandiComponent},
   {path: 'contactUs' , component : ContactUsComponent},
+  {path : 'enquiry' , component : EnquiryComponent} ,
   {path: '', redirectTo: '/home-page', pathMatch: 'full'},
 
 
