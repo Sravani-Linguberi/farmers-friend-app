@@ -1,0 +1,25 @@
+<p>crop works!</p>
+
+
+<app-header></app-header>
+<div class="container">
+    <h1>{{data.name}}</h1>
+    <p>{{data.desc}}</p>
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let d of data.type| paginate: config">
+
+        <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
+                     <a href="#details">  {{d.crop}}<br></a>
+                     
+
+              </div>
+
+           </div>
+
+         </div>
+    
+ <div id="details" class="container-fluid"></div>
+</div>
+
+
+<app-footer></app-footer>

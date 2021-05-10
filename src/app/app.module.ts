@@ -1,3 +1,6 @@
+import { TokenInterceptorService } from './token-interceptor.service';
+import { AuthGuard } from './guard/auth.guard';
+import { UserRequestInterceptor } from './auth/user.request.interceptor';
 import { MandiService } from './mandi.service';
 import { SchemesComponent } from './schemes/schemes.component';
 import { HelplinesComponent } from './helplines/helplines.component';
@@ -21,7 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AdminComponent } from './auth/admin/admin.component';
 import { AdminService } from './admin.service';
@@ -36,6 +39,7 @@ import { AddressComponent } from './Soil/address/address.component';
 // import { SoilComponent } from './posts/soil/soil.component';
 import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
+import { CropComponent } from './crop/crop.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +65,8 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
     // SoilComponent,
     PostSoilComponent,
     PostMandiComponent,
-    AddressComponent
+    AddressComponent,
+    CropComponent
    ],
   imports: [
     BrowserModule,
@@ -73,13 +78,19 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
     HttpClientModule,
     NgxPaginationModule,
     ReactiveFormsModule,
+    
 
 
 
   ],
   providers: [InfoService,ValidationService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    },
               RegisterService,LoginService,AdminService  ,
-               HelplinesService, SchemesService ,SoilSchemaService , MandiService],
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService,AuthGuard],
 
   bootstrap: [AppComponent]
 })
