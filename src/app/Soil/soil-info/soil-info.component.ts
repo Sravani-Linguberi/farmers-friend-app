@@ -59,7 +59,7 @@ public getDataFromAPI(){
     var value = document.getElementById("sortBy") as HTMLSelectElement ;
     var query = "Gujarat"
     query = value.value ;
-    this.soilSchema.getsoilSchema(query).subscribe(
+    this.soilSchema.getsoilSchema().subscribe(
       (res) =>{
 
         this.records = res ;

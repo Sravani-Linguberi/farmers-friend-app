@@ -50,13 +50,32 @@
           <h5>  <a class="nav-link"  href="register">Signup</a></h5>
           </li>
           <li>
+
             <h5><a class="nav-link" href="contact">Contact us</a></h5>
           </li>
           <li *ngIf="!authService.authenticate()">
            <h5> <a class="nav-link"  href="admin">Admin</a></h5>
           </li>
+          <li>
+            <a class="nav-link"  href="admin">Admin</a>
+           </li>
+          <div class="header-right">
+
+            <label *ngIf="authService.authenticate()">You're in!</label>
+              <button type="button" class="btn btn-danger" style="cursor: pointer;" (click)="signOutUser()" *ngIf="authService.authenticate()">
+                sign-out
+              </button>
+            <button class="btn " *ngIf="!authService.authenticate()"> <a href="login">Login</a> </button>
+            <button class="btn" *ngIf="!authService.authenticate()"><a href="register">Signup</a></button>
+            <button class="btn" id="contact"><a href="contact">Contact us</a></button>
+            <button class="btn" id="admin"*ngIf="!authService.authenticate()"><a href="admin">Admin</a></button>
+
+
+
+          </div>
 
         </div>
+
 
 </nav>
   <div id="name-social-container">
