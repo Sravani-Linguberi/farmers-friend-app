@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchemesComponent implements OnInit {
 
+  public title ="GOVERNMENT SCHEMES FOR AGRICULTURE" ;
   config:any;
-  title = "Market-Price-Info" ;
+
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;

@@ -162,14 +162,15 @@ section:nth-child(2n + 1) {
 }
 
 #about-para {
-  padding: 10px;
+    padding: 10px;
   width: 70%;
   text-align: justify;
   color: grey;
   line-height: 28px;
   font-size: 1.1rem;
-  margin: auto;
+  margin-top: 5%;
 }
+
 
 
 
@@ -542,4 +543,13 @@ button:focus {
 .fifty-percent {
   height: inherit;
   width: 50%;
+}
+
+
+.homegraph{
+
+  height: 25%;
+  width: 25%;
+  // margin-top: 10%;
+  float: left;
 }
