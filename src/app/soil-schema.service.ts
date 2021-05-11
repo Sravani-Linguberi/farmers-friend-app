@@ -14,17 +14,17 @@ export class SoilSchemaService {
   constructor(private httpclient: HttpClient) { }
 
 
-  getsoilSchema(query:string){
+  getsoilSchema(){
 
 
-    return this.httpclient.get<any>(`http://localhost:3000/api/SoilSchemas`)
+    return this.httpclient.get<any>(`http://localhost:3000/api/SoilSchema`)
 }
 
 addgetsoilSchema(newsoilSchema:any)
 {
   var headers= new HttpHeaders();
   headers.append('soil-type' , 'application/json ');
-  return this.httpclient.post<any>('http://localhost:3000/api/soilSchema', newsoilSchema,{headers:headers})
+  return this.httpclient.post<any>('http://localhost:3000/api/SoilSchema', newsoilSchema,{headers:headers})
 }
 }
 

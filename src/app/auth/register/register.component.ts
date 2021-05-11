@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  
+  hide:boolean=false;
+  status:any =""
 form: FormGroup;
 constructor(private fb: FormBuilder, private authService: RegisterService, private router: Router, private otpservice:OtpService) {
   this.form = this.fb.group({
@@ -49,8 +50,8 @@ constructor(private fb: FormBuilder, private authService: RegisterService, priva
   }
 
 
-  getOtp(){
-    const phone = this.form.get('phone')!.value
+  getOtp(phone: string){
+   // const phone = this.form.get('phone')!.value
     console.log(phone)
     this.otpservice.getotp(phone).subscribe(res=>{
       console.log(res)
@@ -64,13 +65,19 @@ constructor(private fb: FormBuilder, private authService: RegisterService, priva
   verifyOtp(){
     const phone = this.form.get('phone')!.value
     const code = this.form.get('code')!.value
+    console.log(phone)
     console.log(code)
-    this.otpservice.verify(phone,code).subscribe(res=>{
+    this.otpservice.getVerified(phone,code)
+    .then((res:any) => {
       console.log(res)
-    },
-    err=>{
-      console.log(err)
+      this.status = res.status;
+      console.log(this.status)
+      if(this.status === "approved"){
+        alert("You have successfully registered!")
+        this.hide = true;
+      }
     })
+    .catch(err => console.log(err))
 
    }
 
