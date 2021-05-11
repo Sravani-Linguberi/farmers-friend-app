@@ -10,7 +10,7 @@ export class MandiComponent implements OnInit {
 
 
   config:any;
-  title = "Market-Price-Info" ;
+   public title = "MANDI " ;
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;

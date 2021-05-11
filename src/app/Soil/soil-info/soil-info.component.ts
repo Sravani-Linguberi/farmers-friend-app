@@ -32,8 +32,8 @@ public pageChanged(event:any):void{
 
 
 public getDataFromAPI(){
-  
-  this.soilSchema.getsoilSchema().subscribe(
+
+  this.soilSchema.getsoilSchema("bihar").subscribe(
     (res) =>{
 
       this.records = res ;
@@ -61,19 +61,19 @@ public getDataFromAPI(){
     query = value.value ;
     this.soilSchema.getsoilSchema(query).subscribe(
       (res) =>{
-  
+
         this.records = res ;
         // this.records = this.data.records ;
         // this.totalRecords = res.length  ;
         // this.filterData = this.records.filter(el=>el.state == "Gujarat")
-  
-  
+
+
       },
       (err:any)=>{
         console.log(err);
       }
-  
+
     )
-   
+
 }
 }

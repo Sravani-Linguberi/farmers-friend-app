@@ -11,7 +11,7 @@ export class CropComponent implements OnInit {
   details:any[]=[];
   config:any;
   id:number=1;
-  title = "Market-Price-Info" ;
+  public title = "TYPES OF CROPS" ;
   database : any[] = [];
    data : any ;
   records: any[] = [] ;
@@ -42,9 +42,6 @@ public getDataFromAPI(){
       this.data = this.database[<number>(this.id)];
 
       this.records = res.type ;
-      // this.records = this.data.records ;
-      // this.totalRecords = res.length  ;
-      // this.filterData = this.records.filter(el=>el.state == "Gujarat")
 
 
     },
@@ -60,29 +57,12 @@ public getDataFromAPI(){
   }
 
 
-//   sortData(){
-//     var value = document.getElementById("sortBy") as HTMLSelectElement ;
-//     var query = "Gujarat"
-//     query = value.value ;
-//     //var value = "bihar";
-//       this.filterData = this.records.filter(el=>el.state == query)
-//       console.log(this.filterData)
-//   //   this.InfoService.getData(query).subscribe(
-//   //   (res) =>{
 
-//   //     this.data = res ;
-//   //     console.log(this.data)
-//   //   },
-//   //   (err)=>{
-//   //     console.log(err);
-//   //   }
-//   // )
-// }
 
 loadData(val:string){
   this.show=false
   this.details = this.data.type.filter((d:any)=>d.crop==val)
-  
+
 }
 
 }

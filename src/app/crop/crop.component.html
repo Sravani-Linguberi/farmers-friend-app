@@ -1,8 +1,8 @@
-<p>crop works!</p>
+<app-header [title]="title"></app-header>
+<section id="about">
 
+  <div id="about-para">
 
-<app-header></app-header>
-<div class="container">
   <div *ngIf="show">
     <h1>{{data.name}}</h1>
     <p>{{data.desc}}</p>
@@ -16,16 +16,18 @@
 
         <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
                      <a (click)="loadData(d.crop)" >  {{d.crop}}<br></a>
-                     
+
 
               </div>
 
            </div>
 
          </div>
-    
+
+
 
 </div>
+</section>
 
 
 <app-footer></app-footer>

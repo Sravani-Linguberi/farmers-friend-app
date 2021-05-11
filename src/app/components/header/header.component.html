@@ -46,7 +46,7 @@
 
 
     <div class="header-right">
-    
+
       <label *ngIf="authService.authenticate()">You're in!</label>
         <button type="button" class="btn btn-danger" style="cursor: pointer;" (click)="signOutUser()" *ngIf="authService.authenticate()">
           sign-out
@@ -60,7 +60,7 @@
         <button type="button" class="btn btn-danger" (click)="signOutUser()">
           Click here to sign-out
         </button>
-      </div> 
+      </div>
 
 
     </div>
@@ -101,7 +101,7 @@
           </div>
         </ul>
         <div class="horizontal-list nav-menu  navbar navbar-expand-lg navbar-light " style="margin-left: 30% ;  "  >
-          <!-- <li>
+          <li>
             <a class="nav-link" href="login">Login</a>
           </li>
           <li>
@@ -112,8 +112,8 @@
           </li>
           <li>
             <a class="nav-link"  href="admin">Admin</a>
-          </li> -->
-          
+          </li>
+
         </div>
 
 
