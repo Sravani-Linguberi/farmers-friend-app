@@ -11,7 +11,7 @@ export class HelplinesComponent implements OnInit {
 
   helplines:any;
   config:any;
-  title : any ;
+  public title = "HELPLINE NUMBERS " ;
   details :any
    data : any ;
   records: any[] = [] ;
