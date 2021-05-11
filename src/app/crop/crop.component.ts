@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./crop.component.scss']
 })
 export class CropComponent implements OnInit {
-
+  details:any[]=[];
   config:any;
   id:number=1;
   title = "Market-Price-Info" ;
@@ -38,7 +38,7 @@ public getDataFromAPI(){
     (res) =>{
       this.database = res;
       this.id = +(this._Activatedroute.snapshot.paramMap.get("id")!);
-      this.data = this.database[this.id];
+      this.data = this.database[<number>(this.id)];
 
       this.records = res.type ;
       // this.records = this.data.records ;
@@ -77,5 +77,10 @@ public getDataFromAPI(){
 //   //   }
 //   // )
 // }
+
+loadData(val:string){
+  this.details = this.data.type.filter((d:any)=>d.crop==val)
+  
+}
 
 }

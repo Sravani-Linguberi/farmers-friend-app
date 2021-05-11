@@ -5,11 +5,15 @@
 <div class="container">
     <h1>{{data.name}}</h1>
     <p>{{data.desc}}</p>
+    <div id="details" class="container-fluid">
+      <h1>{{details[0].crop}}</h1>
+      <p>{{details[0].details}}</p>
+    </div>
     <div class="row">
         <div class="col-lg-4" *ngFor="let d of data.type| paginate: config">
 
         <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
-                     <a href="#details">  {{d.crop}}<br></a>
+                     <a (click)="loadData(d.crop)" >  {{d.crop}}<br></a>
                      
 
               </div>
@@ -18,7 +22,7 @@
 
          </div>
     
- <div id="details" class="container-fluid"></div>
+
 </div>
 
 

@@ -48,9 +48,13 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(
       newlogin
     ).subscribe(res=>{console.log(res)
+      alert(res.msg)
       localStorage.setItem('token',res.token)
     this.router.navigate(['/home'])},
-    err=>console.log(err))
+    err=>{alert(err.error.msg)
+      //console.log(err)
+      window.location.reload()
+    })
   }
 
 }

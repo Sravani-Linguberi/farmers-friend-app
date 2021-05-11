@@ -41,6 +41,7 @@ import { AddressComponent } from './Soil/address/address.component';
 import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
 import { CropComponent } from './crop/crop.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,8 @@ import { CropComponent } from './crop/crop.component';
     PostSoilComponent,
     PostMandiComponent,
     AddressComponent,
-    CropComponent
+    CropComponent,
+    AdminHomeComponent
    ],
   imports: [
     BrowserModule,

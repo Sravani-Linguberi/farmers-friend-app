@@ -1,3 +1,4 @@
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { CropComponent } from './crop/crop.component';
 import { AddressComponent } from './Soil/address/address.component';
 import { EnquiryComponent } from './posts/enquiry/enquiry.component';
@@ -36,21 +37,13 @@ const routes: Routes = [
   {path: 'register' ,component: RegisterComponent},
   { path: 'contact', component: ContactUsComponent },
   { path: 'home', component: HomePageComponent,canActivate: [AuthGuard] },
+  { path: 'home-page', component: AdminHomeComponent ,canActivate: [AuthGuard] },
   {path: 'admin' , component:  AdminComponent},
-
-  
-  {path: 'price' , component:  MarketPriceComponent},
-  {path: 'address' , component: SoilInfoComponent},
-  {path : 'helplines' , component: HelplinesComponent },
-  {path : 'Scheme' ,  component : SchemesComponent},
-  {path: 'mandi' , component: MandiComponent},
-  {path: 'addHelplines' , component : PostHelplinesComponent},
-  {path: 'post-helpline' ,  component : PostHelplinesComponent},
   {path: 'post-soil', component : PostSoilComponent},
   {path: 'post-mandi' ,  component : PostMandiComponent},
   {path: 'contactUs' , component : ContactUsComponent},
   {path : 'enquiry' , component : EnquiryComponent} ,
-  {path: '', redirectTo: '/home-page', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
 
 
 ];

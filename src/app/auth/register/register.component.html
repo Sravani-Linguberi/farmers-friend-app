@@ -17,7 +17,13 @@
         <div class="form-group">
           <label>Phone Number</label>
           <input type="number" class="form-control" formControlName="phone" placeholder="Enter a phone number" required>
+          <a class="btn btn-success" (click)="getOtp()">Get OTP</a>
         </div>
+        
+        <div class="form-group">
+          <input type="number" class="form-control" formControlName="code" placeholder="Enter OTP Code" required>
+        </div>
+        <a (click)="verifyOtp()" class="btn btn-success">Verify</a>
         <button type="submit" class="btn btn-success">Sign Up</button>
       </form>
     </div>
