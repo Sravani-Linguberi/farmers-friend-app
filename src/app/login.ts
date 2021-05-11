@@ -1,4 +1,5 @@
 export class login{
   _id?:string;
-  phoneNumber:any
+  phoneNumber:any;
+  password?:number
 }

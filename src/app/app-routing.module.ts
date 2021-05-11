@@ -1,3 +1,6 @@
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { CropComponent } from './crop/crop.component';
+import { AddressComponent } from './Soil/address/address.component';
 import { EnquiryComponent } from './posts/enquiry/enquiry.component';
 import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostHelplinesComponent } from './posts/post-helplines/post-helplines.component';
@@ -15,26 +18,32 @@ import { MarketPriceComponent } from './Info/market-price/market-price.component
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AuthGuard } from './guard/auth.guard';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
 import { combineAll } from 'rxjs/operators';
 
-const routes: Routes = [{ path: 'contact', component: ContactUsComponent },
-{path: 'register' ,component: RegisterComponent},
+const routes: Routes = [
+  
+  {path: 'price' , component:  MarketPriceComponent,canActivate: [AuthGuard]},
+  {path: 'address' , component: AddressComponent,canActivate: [AuthGuard]},
+  {path : 'helplines' , component: HelplinesComponent,canActivate: [AuthGuard] },
+  {path : 'Scheme' ,  component : SchemesComponent,canActivate: [AuthGuard]},
+  {path: 'mandi' , component: MandiComponent,canActivate: [AuthGuard]},
+  {path: 'addHelplines' , component : PostHelplinesComponent,canActivate: [AuthGuard]},
+  {path: 'post-helpline' ,  component : PostHelplinesComponent,canActivate: [AuthGuard]},
+  {path: 'crops/:id' ,  component : CropComponent,canActivate: [AuthGuard] },
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
-  { path: 'home-page', component: HomePageComponent },
+  {path: 'register' ,component: RegisterComponent},
+  { path: 'contact', component: ContactUsComponent },
+  { path: 'home', component: HomePageComponent,canActivate: [AuthGuard] },
+  { path: 'home-page', component: AdminHomeComponent ,canActivate: [AuthGuard] },
   {path: 'admin' , component:  AdminComponent},
-  {path: 'price' , component:  MarketPriceComponent},
-  {path: 'address' , component: SoilInfoComponent},
-  {path : 'helplines' , component: HelplinesComponent },
-  {path : 'Scheme' ,  component : SchemesComponent},
-  {path: 'mandi' , component: MandiComponent},
-  {path: 'addHelplines' , component : PostHelplinesComponent},
-  {path: 'post-helpline' ,  component : PostHelplinesComponent},
   {path: 'post-soil', component : PostSoilComponent},
   {path: 'post-mandi' ,  component : PostMandiComponent},
   {path: 'contactUs' , component : ContactUsComponent},
   {path : 'enquiry' , component : EnquiryComponent} ,
-  {path: '', redirectTo: '/home-page', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
 
 
 ];

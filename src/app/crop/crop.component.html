@@ -1,0 +1,31 @@
+<p>crop works!</p>
+
+
+<app-header></app-header>
+<div class="container">
+  <div *ngIf="show">
+    <h1>{{data.name}}</h1>
+    <p>{{data.desc}}</p>
+  </div>
+    <div id="details" class="container-fluid">
+      <h1>{{details[0].crop}}</h1>
+      <p>{{details[0].details}}</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let d of data.type| paginate: config">
+
+        <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
+                     <a (click)="loadData(d.crop)" >  {{d.crop}}<br></a>
+                     
+
+              </div>
+
+           </div>
+
+         </div>
+    
+
+</div>
+
+
+<app-footer></app-footer>
