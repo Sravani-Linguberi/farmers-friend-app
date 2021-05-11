@@ -1,25 +1,34 @@
 <app-header></app-header>
 <div class="container">
-  <h2 class="page-header">Signup</h2>
-  <form (submit)="addregister()">
-    <div class="form-group">
-      <label>FullName</label>
-      <input type="text"  [(ngModel)]="FullName" name="FullName" class="form-control" required>
+  <div class="row">
+    <div class="col-12">
+      <h1>Sign Up</h1>
     </div>
-    <div class="form-group">
-      <label>phoneNumber</label>
-      <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" required>
-      <br><br>
- <label for="EnterOTP"><h4>Enter OTP:</h4></label>
-<br>
-  <input formControlName="EnterOTP" id="EnterOTP" />
-
-<button style="margin-left: 5px;" class="btn btn-danger" type="submit" >Verify</button><br><br>
+    <div class="col-12">
+      <form [formGroup]="form" (ngSubmit)="signUpUser()">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" class="form-control" formControlName="username" placeholder="Enter a username" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter a password" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="number" class="form-control" formControlName="phone" placeholder="Enter a phone number" required>
+          <a class="btn btn-success" (click)="getOtp()">Get OTP</a>
+        </div>
+        
+        <div class="form-group">
+          <input type="number" class="form-control" formControlName="code" placeholder="Enter OTP Code" required>
+        </div>
+        <a (click)="verifyOtp()" class="btn btn-success">Verify</a>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+      </form>
     </div>
-
-    <button type="submit" class="btn btn-primary" value="Add" >Signup</button>
-
-  </form>
+  </div>
+</div>
 
 
   <app-footer></app-footer>

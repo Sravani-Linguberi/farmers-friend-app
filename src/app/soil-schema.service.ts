@@ -14,10 +14,10 @@ export class SoilSchemaService {
   constructor(private httpclient: HttpClient) { }
 
 
-  getsoilSchema(){
+  getsoilSchema(query:string){
 
 
-    return this.httpclient.get<any>(`http://localhost:3000/api/SoilSchema?STATE="Assam"`)
+    return this.httpclient.get<any>(`http://localhost:3000/api/SoilSchemas`)
 }
 
 addgetsoilSchema(newsoilSchema:any)

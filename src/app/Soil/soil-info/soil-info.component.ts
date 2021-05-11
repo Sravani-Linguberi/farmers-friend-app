@@ -32,6 +32,7 @@ public pageChanged(event:any):void{
 
 
 public getDataFromAPI(){
+  
   this.soilSchema.getsoilSchema().subscribe(
     (res) =>{
 
@@ -54,24 +55,25 @@ public getDataFromAPI(){
   }
 
 
-//   sortData(){
-//     var value = document.getElementById("sortBy") as HTMLSelectElement ;
-//     var query = "Gujarat"
-//     query = value.value ;
-//     //var value = "bihar";
-//       this.filterData = this.records.filter(el=>el.state == query)
-//       console.log(this.filterData)
-//   //   this.InfoService.getData(query).subscribe(
-//   //   (res) =>{
-
-//   //     this.data = res ;
-//   //     console.log(this.data)
-//   //   },
-//   //   (err)=>{
-//   //     console.log(err);
-//   //   }
-//   // )
-// }
-
-
+  sortData(){
+    var value = document.getElementById("sortBy") as HTMLSelectElement ;
+    var query = "Gujarat"
+    query = value.value ;
+    this.soilSchema.getsoilSchema(query).subscribe(
+      (res) =>{
+  
+        this.records = res ;
+        // this.records = this.data.records ;
+        // this.totalRecords = res.length  ;
+        // this.filterData = this.records.filter(el=>el.state == "Gujarat")
+  
+  
+      },
+      (err:any)=>{
+        console.log(err);
+      }
+  
+    )
+   
+}
 }

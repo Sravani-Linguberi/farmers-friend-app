@@ -1,3 +1,6 @@
+import { TokenInterceptorService } from './token-interceptor.service';
+import { AuthGuard } from './guard/auth.guard';
+import { UserRequestInterceptor } from './auth/user.request.interceptor';
 import { ContactUsService } from './contact-us.service';
 import { MandiService } from './mandi.service';
 import { SchemesComponent } from './schemes/schemes.component';
@@ -22,7 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarketPriceComponent } from './Info/market-price/market-price.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AdminComponent } from './auth/admin/admin.component';
 import { AdminService } from './admin.service';
@@ -33,9 +36,12 @@ import { PostCropsComponent } from './posts/post-crops/post-crops.component';
 import { PostAddressComponent } from './posts/post-address/post-address.component';
 import { EnquiryComponent } from './posts/enquiry/enquiry.component';
 import { MandiComponent } from './Soil/mandi/mandi.component';
+import { AddressComponent } from './Soil/address/address.component';
 // import { SoilComponent } from './posts/soil/soil.component';
 import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
+import { CropComponent } from './crop/crop.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,9 +63,13 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
     HelplinesComponent,
     SchemesComponent,
     MandiComponent,
+    AddressComponent,
     // SoilComponent,
     PostSoilComponent,
-    PostMandiComponent
+    PostMandiComponent,
+    AddressComponent,
+    CropComponent,
+    AdminHomeComponent
    ],
   imports: [
     BrowserModule,
@@ -71,12 +81,19 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
     HttpClientModule,
     NgxPaginationModule,
     ReactiveFormsModule,
+    
 
 
 
   ],
   providers: [InfoService,ValidationService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    },
               RegisterService,LoginService,AdminService  ,
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService,AuthGuard,
                HelplinesService, SchemesService ,SoilSchemaService , MandiService, ContactUsService],
 
   bootstrap: [AppComponent]
