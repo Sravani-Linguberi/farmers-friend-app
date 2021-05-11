@@ -23,7 +23,7 @@ import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
 import { combineAll } from 'rxjs/operators';
 
 const routes: Routes = [
-  
+
   {path: 'price' , component:  MarketPriceComponent,canActivate: [AuthGuard]},
   {path: 'address' , component: AddressComponent,canActivate: [AuthGuard]},
   {path : 'helplines' , component: HelplinesComponent,canActivate: [AuthGuard] },
@@ -43,7 +43,6 @@ const routes: Routes = [
   {path: 'post-mandi' ,  component : PostMandiComponent},
   {path: 'contactUs' , component : ContactUsComponent},
   {path : 'enquiry' , component : EnquiryComponent} ,
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
 
 
 ];

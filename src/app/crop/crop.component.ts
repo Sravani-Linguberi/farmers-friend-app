@@ -62,6 +62,7 @@ public getDataFromAPI(){
 loadData(val:string){
   this.show=false
   this.details = this.data.type.filter((d:any)=>d.crop==val)
+  this.title=this.details[0].crop
 
 }
 
