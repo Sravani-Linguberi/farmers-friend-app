@@ -52,7 +52,7 @@ export class PostSoilComponent implements OnInit {
        this.soilService.addgetsoilSchema(newsoilSchema)
        .subscribe(soilSchema =>{
          this.soilService.push(soilSchema);
-         this.soilService.getsoilSchema("bihar")
+         this.soilService.getsoilSchema()
          .subscribe(soilSchema =>
            this.SoilSchema=soilSchema)
        })
