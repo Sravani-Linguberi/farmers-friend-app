@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./crop.component.scss']
 })
 export class CropComponent implements OnInit {
+  show:boolean=true;
   details:any[]=[];
   config:any;
   id:number=1;
@@ -79,6 +80,7 @@ public getDataFromAPI(){
 // }
 
 loadData(val:string){
+  this.show=false
   this.details = this.data.type.filter((d:any)=>d.crop==val)
   
 }

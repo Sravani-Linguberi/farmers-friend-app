@@ -3,8 +3,10 @@
 
 <app-header></app-header>
 <div class="container">
+  <div *ngIf="show">
     <h1>{{data.name}}</h1>
     <p>{{data.desc}}</p>
+  </div>
     <div id="details" class="container-fluid">
       <h1>{{details[0].crop}}</h1>
       <p>{{details[0].details}}</p>
