@@ -8,7 +8,14 @@
       </div>
       <div class="form-group">
         <label>TOPIC</label>
-        <input type="text"  [(ngModel)]="Topic" name="Topic" class="form-control" required>
+        <!-- <input type="text"  [(ngModel)]="Topic" name="Topic" class="form-control" required> -->
+        <select class="form-select optionSector" id="topic" [(ngModel)]="Topic" name="Topic" aria-label="Default select example"  >
+          <option class="dropdown-item" value="soil lab" style="color: black;">soil lab</option>
+          <option class="dropdown-item" value="Mandi" style="color: black;">Mandi</option>
+          <option class="dropdown-item" value="Crop" style="color: black;">Crop</option>
+          <option class="dropdown-item" value="Helpline" style="color: black;">Helpline</option>
+        </select>
+      
       </div>
        <br><br>
        <div class="form-group">

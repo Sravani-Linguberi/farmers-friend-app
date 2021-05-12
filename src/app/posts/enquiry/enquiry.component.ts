@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnquiryComponent implements OnInit {
 
+  Crop:any[]=[];
+
 
 enquiryQuestion: any
 
@@ -16,13 +18,23 @@ enquiryQuestion: any
   Title: any
   Question: any
   Answer: any
-
-  constructor(private enquiryService : EnquiryService  , private contactUsService : ContactUsService) { }
+  config:any;
+  constructor(private enquiryService : EnquiryService  , private contactUsService : ContactUsService) {
+    this.config={
+      itemsPerPage:1,
+      currentPage:1,
+      totalItems:Object.keys(this.enquiryQuestion).length
+    }
+   }
+  
 
   ngOnInit(): void {
 
     this.getenquiry()
+    //this.sortData()
+   
   }
+  
 
   getenquiry(){
 
@@ -37,10 +49,17 @@ enquiryQuestion: any
        })
 
        console.log(this.enquiryQuestion)
-       alert("Your details added Successfully")
+      
 
 
      }
+
+    //  sortData(){
+    //    this.Crop = this.enquiryQuestion.filter( (el:any)=>{ el.Topic === "Mandi"
+    //   console.log(el)})
+    //    console.log(this.Crop)
+
+    //  }
 
 
   addenquiry(){
@@ -48,7 +67,7 @@ enquiryQuestion: any
     const addEnquiry = {
 
 
-      Title: this.enquiryQuestion.Topic ,
+      Title: this.enquiryQuestion[0].Topic ,
       Question:this.Question ,
       Answer: this.Answer
      }
@@ -60,7 +79,11 @@ enquiryQuestion: any
            this.enquiry=enquiry)
        })
 
-     alert("Your details added Successfully")
+     
      }
+     public pageChanged(event:any):void{
+      this.config.currentPage=event;
+    }
+     
 }
 

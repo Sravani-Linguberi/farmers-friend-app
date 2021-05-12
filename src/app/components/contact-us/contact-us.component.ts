@@ -26,6 +26,7 @@ export class ContactUsComponent implements OnInit {
 
 
   addcontacUs(){
+    console.log(this.Topic)
   const contactus = {
 
 
