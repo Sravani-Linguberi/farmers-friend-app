@@ -3,23 +3,23 @@
 
     <div>
         <label class="mr-3">
-            SOIL TESTING LABS 
+             MANDI
           </label>
     <label class="switch">
         <input type="checkbox" (click)="showSoil()" id="soil" checked>
         <span class="slider"></span>
       </label>
-    
+
     <label class="ml-3">
-        MANDI 
+      SOIL TESTING LABS
       </label>
 
 </div>
 
-<div *ngIf="soil"> 
+<div *ngIf="soil">
     <app-soil-info></app-soil-info>
 </div>
-<div *ngIf="!soil"> 
+<div *ngIf="!soil">
     <app-mandi></app-mandi>
 </div>
 </div>
