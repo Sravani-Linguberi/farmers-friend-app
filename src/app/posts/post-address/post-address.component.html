@@ -1,1 +1,28 @@
-<p>post-address works!</p>
+<app-admin-header></app-admin-header>
+<div class="container">
+
+    <div>
+        <label class="mr-3">
+            SOIL TESTING LABS 
+          </label>
+    <label class="switch">
+        <input type="checkbox" (click)="showSoil()" id="soil" checked>
+        <span class="slider"></span>
+      </label>
+    
+    <label class="ml-3">
+        MANDI 
+      </label>
+
+</div>
+
+<div *ngIf="soil"> 
+    <app-post-mandi></app-post-mandi>
+</div>
+<div *ngIf="!soil"> 
+    <app-post-soil></app-post-soil>
+</div>
+</div>
+
+
+<app-footer></app-footer>

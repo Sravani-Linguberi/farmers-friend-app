@@ -1,3 +1,4 @@
+import { PostAddressComponent } from './posts/post-address/post-address.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { CropComponent } from './crop/crop.component';
 import { AddressComponent } from './Soil/address/address.component';
@@ -30,8 +31,7 @@ const routes: Routes = [
   {path : 'Scheme' ,  component : SchemesComponent,canActivate: [AuthGuard]},
   {path: 'mandi' , component: MandiComponent,canActivate: [AuthGuard]},
   {path: 'addHelplines' , component : PostHelplinesComponent,canActivate: [AuthGuard]},
-  {path: 'post-helpline' ,  component : PostHelplinesComponent,canActivate: [AuthGuard]},
-  {path: 'crops/:id' ,  component : CropComponent,canActivate: [AuthGuard] },
+    {path: 'crops/:id' ,  component : CropComponent,canActivate: [AuthGuard] },
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   {path: 'register' ,component: RegisterComponent},
@@ -39,10 +39,9 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent,canActivate: [AuthGuard] },
   { path: 'home-page', component: AdminHomeComponent ,canActivate: [AuthGuard] },
   {path: 'admin' , component:  AdminComponent},
-  {path: 'post-soil', component : PostSoilComponent},
-  {path: 'post-mandi' ,  component : PostMandiComponent},
+  {path: 'post-address', component : PostAddressComponent, canActivate:[AuthGuard]},
   {path: 'contactUs' , component : ContactUsComponent},
-  {path : 'enquiry' , component : EnquiryComponent} ,
+  {path : 'enquiry' , component : EnquiryComponent , canActivate:[AuthGuard]} ,
   {path: '', redirectTo: '/login', pathMatch: 'full'},
 
 
