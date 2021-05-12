@@ -2,11 +2,18 @@
 <div class="body-container">
 <!-- <div style= "background-image: url()  ; background-position: auto; "></div> -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<main>
+
+<section id="about">
+  <div id="about-para">
+<h1> ADDRESS OF SOIL TESTING LAB'S</h1>
+<hr >
+
+ </div>
+ </section>
 
 
-
-
-<select class="form-select optionSector" id="sortBy" aria-label="Default select example"  >
+<!-- <select class="form-select optionSector" id="sortBy" aria-label="Default select example"  > -->
   <!-- <option selected>State</option>
   <option value="district">district</option>
  <option value="commodity">commodity</option>
@@ -14,7 +21,7 @@
  <option value="arrival_date">arrival date</option>
  <option value="min_price">min price</option>
  <option value="max_price">max price</option> -->
- <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+ <!-- <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 <option value="Andhra Pradesh">Andhra Pradesh</option>
 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
 <option value="Assam">Assam</option>
@@ -50,7 +57,7 @@
 <option value="Uttar Pradesh">Uttar Pradesh</option>
 <option value="West Bengal">West Bengal</option>
 
-</select>
+</select> -->
 <!-- <button type="button" (click)="sortData()" class="btn btn-primary btn-sm" style="border: 2px solid black; margin-left: 2px;">Submit</button> -->
 
 
@@ -64,27 +71,27 @@
  <option value="max_price">max price</option>
  </select>
  <button type="submit" (click)="sortData()">Submit</button> -->
- <div class="headLine">
+ <!-- <div class="headLine">
  <h1 style="text-align: center;">AVAILABE MARKET PRICE FOR YOUR CROP </h1>
 </div>
- <div class="container mt-5" >
+ <div class="container mt-5" > -->
    <!-- <div class="card" id="mycard" style="padding: 5px;"> -->
-      <div class="row">
+      <!-- <div class="row">
           <div class="col-lg-4"  *ngFor="let d of records    | paginate: config" >
               <div class="card mt-3" id="hello" style="padding: 5px; opacity: inherit;">
                        <h4>  state: {{d.STATE}}<br></h4>
                        <h4>district: {{d.dist}}<br></h4>
                        <h4>market: {{d.Office_Name}}<br></h4>
                        <h4>commodity :{{d.Office_Address}}<br></h4>
-                       <button class="btn-primary" id="details">Details</button>
+                       <button class="btn-primary" id="details">Details</button> -->
                        <!-- <h4>variety: {{d.No_of_Staff}}<br></h4>
                        <h4>arrival_date: {{d.Email}}<br></h4>
                        <h4>min_price: {{d.TelePhone}}<br></h4>
                        <h4>max_price: {{d.Soil_Equipment}} <br></h4> -->
 
-                </div>
+                <!-- </div>
 
-             </div>
+              </div>
 
            </div>
 
@@ -93,5 +100,43 @@
           <pagination-controls  (pageChange)="pageChanged($event)"></pagination-controls>
         </div>
 
-  </div>
+  </div> -->
 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th scope="col" sortable="name">STATE</th>
+        <th scope="col" sortable="area">DISTRICT</th>
+        <th scope="col" sortable="population">OFFICE_NAME</th>
+        <th scope="col" sortable="population">OFFICE_ADDRESS</th>
+        <th scope="col" sortable="population">NO_OF_STAFF</th>
+        <th scope="col" sortable="population">EMAIL</th>
+        <th scope="col" sortable="population">TELEPHONE</th>
+        <th scope="col" sortable="population">SOIL EQUIPMENT</th>
+
+
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let d of records|paginate: config" >
+        <th scope="row">{{ d.STATE}}</th>
+        <td>{{ d.dist}}</td>
+        <td>{{ d.Office_Name}}</td>
+        <td>{{ d.Office_Address}}</td>
+        <td>{{ d.No_of_Staff}}</td>
+        <td>{{ d.Email}}</td>
+        <td>{{ d.TelePhone}}</td>
+        <td>{{ d.Soil_Equipment}}</td>
+
+
+      </tr>
+      </tbody>
+    </table>
+
+  <div style="text-align: center; color: black; margin-top: 5px;">
+   <pagination-controls  (pageChange)="pageChanged($event)"></pagination-controls>
+ </div>
+</main>
+<!-- </div> -->

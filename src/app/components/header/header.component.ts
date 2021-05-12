@@ -11,11 +11,11 @@ import { RegisterService } from 'src/app/register.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+@Input() public carousel:any
   constructor(public authService: RegisterService,private router:Router) { }
    @Input() public title : string = "";
 
-  
+
 
   ngOnInit() {
   }

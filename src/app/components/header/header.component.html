@@ -1,4 +1,4 @@
-
+<!--
 
 
 <header id="body-header">
@@ -21,17 +21,7 @@
         <li>
          <h5><a class="nav-link" href="helplines">Helplines</a></h5>
         </li>
-        <!-- <li class="nav-item dropdown"> -->
-         <!-- <h5> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" -->
-            <!-- aria-haspopup="true" aria-expanded="false"> -->
-            <!-- Crops -->
-          <!-- </a></h5> -->
-          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-            <!-- <h5><a class="dropdown-item" href="/crops/0" style="color: black;">Kharif</a></h5> -->
-            <!-- <h5><a class="dropdown-item" href="/crops/1" style="color: black;">Rabi</a></h5> -->
-            <!-- <div class="dropdown-divider"></div> -->
-          <!-- <h5>  <a class="dropdown-item" href="#"></a></h5> -->
-          <!-- </div> -->
+
           <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Crops
             <span class="caret"></span></button>
@@ -46,7 +36,7 @@
         <div class="horizontal-list nav-menu  navbar navbar-expand-lg navbar-light " style="margin-left: 30% ;  "  >
           <li>
             <span *ngIf="authService.authenticate()">
-                            <!-- HI you are log-in -->
+
             </span>
            <h5> <a  (click)="signOutUser()" *ngIf="authService.authenticate()">
               sign-out
@@ -66,22 +56,12 @@
           <li *ngIf="!authService.authenticate()">
            <h5> <a class="nav-link"  href="admin">Admin</a></h5>
           </li>
-          <!-- <li>
-             <a class="nav-link"  href="admin">Admin</a>
-           </li> -->
+
           <div class="header-right">
 
-            <!-- <label *ngIf="authService.authenticate()">You're in!</label>
-              <button type="button" class="btn btn-danger" style="cursor: pointer;" (click)="signOutUser()" *ngIf="authService.authenticate()">
-                sign-out
-              </button> -->
-             <!-- <button class="btn " *ngIf="!authService.authenticate()"> <a href="login">Login</a> </button>
-            <button class="btn" *ngIf="!authService.authenticate()"><a href="register">Signup</a></button> -->
-               <!-- <button class="btn" id="contact"><a href="contact">Contact us</a></button>
-            <button class="btn" id="admin"*ngIf="!authService.authenticate()"><a href="admin">Admin</a></button> -->
 
 
-          </div> -->
+          </div>
 
         </div>
 
@@ -95,4 +75,137 @@
   </div>
 
 </header>
+ -->
 
+
+ <!-- Latest -->
+
+
+ <header id="body-header " style="background-color: black;">
+  <nav class="navbar navbar-expand-lg navbar-light" >
+
+    <ul class="horizontal-list nav-menu">
+        <li>
+         <h5> <a class="nav-link" href="home">Home </a></h5>
+        </li>
+        <li>
+         <h5> <a class="nav-link" href="price">Market Price</a></h5>
+
+        </li>
+        <li >
+         <h5> <a class="nav-link" href="Scheme">Schemes</a></h5>
+        </li>
+        <li>
+         <h5><a class="nav-link" href="address">Important Address</a></h5>
+        </li>
+        <li>
+         <h5><a class="nav-link" href="helplines">Helplines</a></h5>
+        </li>
+        <li class="nav-item dropdown">
+         <!-- <h5>
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Crops
+          </a></h5>
+          </li> -->
+          <div class="dropdown" style="background-color: black;">
+            <h5>
+             <a class="btn btn-secondary dropdown-toggle" style="background-color: black; border: none;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              CROPS
+             </a>
+            </h5>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/crops/0">Kharif</a>
+              <a class="dropdown-item" href="/crops/1">Rabi</a>
+
+            </div>
+          </div>
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <h5><a class="dropdown-item" href="/crops/0" >Kharif</a></h5>
+            <h5><a class="dropdown-item" href="/crops/1" style="color: black;">Rabi</a></h5>
+            <div class="dropdown-divider"></div>
+          <h5>  <a class="dropdown-item" href="#"></a></h5>
+          </div> -->
+        </ul>
+        <div class="horizontal-list nav-menu  navbar navbar-expand-lg navbar-light " style="float:inline-end; margin-right: 5%;"  >
+          <li>
+            <span *ngIf="authService.authenticate()">
+
+            </span>
+           <h5> <a  (click)="signOutUser()" *ngIf="authService.authenticate()">Log-out</a>
+          </h5>
+          </li >
+          <li *ngIf="!authService.authenticate()">
+            <h5> <a class="nav-link"  href="admin">Admin</a></h5>
+           </li>
+
+          <li *ngIf="!authService.authenticate()">
+           <h5> <a class="nav-link" href="login">Login</a></h5>
+          </li>
+          <li *ngIf="!authService.authenticate()">
+          <h5>  <a class="nav-link"  href="register">Signup</a></h5>
+          </li>
+          <li>
+            <h5><a class="nav-link" href="contact">Contact us</a></h5>
+          </li>
+          </div>
+          </nav>
+
+          <div id="carousel-example-2" *ngIf="!carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-2" data-slide-to="1"></li>
+              <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="view">
+                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+                  <div class="mask rgba-black-light"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Wlecome to Farmer's Friend</h3>
+                  <p>A Farmer is a magician who produces money from the mud-"Thomas Jefferson"</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+                  <div class="mask rgba-black-strong"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">We are here to help you</h3>
+                  <p>“No race can prosper until it learns there is as much dignity in tilling a field as in writing a poem.” – Booker T. Washington</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!--Mask color-->
+                <div class="view">
+                  <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+                  <div class="mask rgba-black-slight"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h3 class="h3-responsive">Agriculture is our wisest pursuit</h3>
+                  <p>“When tillage begins, other arts follow. The farmers, therefore, are the founders of human civilization.” – Daniel Webster</p>
+                </div>
+              </div>
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+          </div>
+
+
+        </header>

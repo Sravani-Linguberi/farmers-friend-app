@@ -33,17 +33,17 @@ const routes: Routes = [
   {path: 'mandi' , component: MandiComponent,canActivate: [AuthGuard]},
   {path: 'addHelplines' , component : PostHelplinesComponent,canActivate: [AuthGuard]},
     {path: 'crops/:id' ,  component : CropComponent,canActivate: [AuthGuard] },
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  // {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   {path: 'register' ,component: RegisterComponent},
   { path: 'contact', component: ContactUsComponent },
-  { path: 'home', component: HomePageComponent,canActivate: [AuthGuard] },
+  { path: 'home', component: HomePageComponent },
   { path: 'home-page', component: AdminHomeComponent ,canActivate: [AuthGuard] },
   {path: 'admin' , component:  AdminComponent},
   {path: 'post-address', component : PostAddressComponent, canActivate:[AuthGuard]},
   {path: 'contactUs' , component : ContactUsComponent},
   {path : 'enquiry' , component : EnquiryComponent , canActivate:[AuthGuard]} ,
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path:'visuals', component:VisualizationComponent}
 
 

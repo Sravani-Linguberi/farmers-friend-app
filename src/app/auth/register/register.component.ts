@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  public carousel:boolean=false
   hide:boolean=false;
   status:any =""
 form: FormGroup;
@@ -30,22 +31,22 @@ constructor(private fb: FormBuilder, private authService: RegisterService, priva
   }
 
   signUpUser(){
-    
+
          const newregister={
            FullName:this.form.get('username')!.value,
            phone:this.form.get('phone')!.value,
            pass:this.form.get('password')!.value
          }
-   
+
     this.authService.signUp(
       newregister
     ).subscribe(res=>{console.log(res)
     localStorage.setItem('token',res.token)
-      //this.router.navigate(['/home'])
+      this.router.navigate(['/home'])
   },
   err=>{alert(err.error.msg)
-    //console.log(err)
-    //window.location.reload()
+    console.log(err)
+    window.location.reload()
   })
   }
 
@@ -73,7 +74,7 @@ constructor(private fb: FormBuilder, private authService: RegisterService, priva
       this.status = res.status;
       console.log(this.status)
       if(this.status === "approved"){
-        alert("You have successfully registered!")
+        alert("OTP verified successfully!!!!!!")
         this.hide = true;
       }
     })

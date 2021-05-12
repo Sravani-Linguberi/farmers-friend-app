@@ -44,6 +44,7 @@ import { CropComponent } from './crop/crop.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { VisualizationComponent } from './components/visualization/visualization.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { AdminFooterComponent } from './components/admin-footer/admin-footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     CropComponent,
     AdminHomeComponent,
     VisualizationComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    AdminFooterComponent
    ],
   imports: [
     BrowserModule,
