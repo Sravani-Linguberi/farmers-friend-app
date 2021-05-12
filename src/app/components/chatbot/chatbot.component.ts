@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { CropSchemaService } from './../../crop-schema.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chatbot.component.scss']
 })
 export class ChatbotComponent implements OnInit {
-
-  constructor() { }
+  Question:any
+  constructor(private cropSchemaService:CropSchemaService) { }
 
   ngOnInit(): void {
   }
 
-  input=document.getElementById('input')
+  // input=document.getElementById('input')
 
-  button=document.getElementById('abc');
-   paragraph=document.createElement("p");
+  // button=document.getElementById('abc');
+  //  paragraph=document.createElement("p");
 
   //  add()
   //  {
@@ -26,7 +28,27 @@ export class ChatbotComponent implements OnInit {
   //  }
   sendMessage(message_content:any){
     console.log(message_content.value)
+    message_content.value="";
   }
   title = 'final';
+
+  getCropSchema(){
+
+
+    this.cropSchemaService.getCropSchema()
+       .subscribe(res =>{
+
+         this.Question = res
+       },
+       err=>{
+         console.log(err) ;
+       })
+
+       console.log(this.Question)
+
+
+
+     }
+
 
 }

@@ -21,18 +21,28 @@
         <li>
          <h5><a class="nav-link" href="helplines">Helplines</a></h5>
         </li>
-        <li class="nav-item dropdown">
-         <h5> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Crops
-          </a></h5>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <h5><a class="dropdown-item" href="/crops/0" style="color: black;">Kharif</a></h5>
-            <h5><a class="dropdown-item" href="/crops/1" style="color: black;">Rabi</a></h5>
-            <div class="dropdown-divider"></div>
-          <h5>  <a class="dropdown-item" href="#"></a></h5>
+        <!-- <li class="nav-item dropdown"> -->
+         <!-- <h5> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" -->
+            <!-- aria-haspopup="true" aria-expanded="false"> -->
+            <!-- Crops -->
+          <!-- </a></h5> -->
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+            <!-- <h5><a class="dropdown-item" href="/crops/0" style="color: black;">Kharif</a></h5> -->
+            <!-- <h5><a class="dropdown-item" href="/crops/1" style="color: black;">Rabi</a></h5> -->
+            <!-- <div class="dropdown-divider"></div> -->
+          <!-- <h5>  <a class="dropdown-item" href="#"></a></h5> -->
+          <!-- </div> -->
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Crops
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/crops/0" style="color: solid black;">Kharif</a></li>
+              <li><a href="/crops/1" style="color: solid black;">Rabi</a></li>
+
+            </ul>
           </div>
         </ul>
+
         <div class="horizontal-list nav-menu  navbar navbar-expand-lg navbar-light " style="margin-left: 30% ;  "  >
           <li>
             <span *ngIf="authService.authenticate()">
@@ -56,9 +66,9 @@
           <li *ngIf="!authService.authenticate()">
            <h5> <a class="nav-link"  href="admin">Admin</a></h5>
           </li>
-          <li>
+          <!-- <li>
              <a class="nav-link"  href="admin">Admin</a>
-           </li>
+           </li> -->
           <div class="header-right">
 
             <!-- <label *ngIf="authService.authenticate()">You're in!</label>

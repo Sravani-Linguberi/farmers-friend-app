@@ -20,21 +20,21 @@ enquiryQuestion: any
   Answer: any
   config:any;
   constructor(private enquiryService : EnquiryService  , private contactUsService : ContactUsService) {
-    this.config={
-      itemsPerPage:1,
-      currentPage:1,
-      totalItems:Object.keys(this.enquiryQuestion).length
-    }
+    // this.config={
+    //   itemsPerPage:1,
+    //   currentPage:1,
+    //   totalItems:Object.keys(this.enquiryQuestion).length
+    // }
    }
-  
+
 
   ngOnInit(): void {
 
     this.getenquiry()
     //this.sortData()
-   
+
   }
-  
+
 
   getenquiry(){
 
@@ -49,7 +49,7 @@ enquiryQuestion: any
        })
 
        console.log(this.enquiryQuestion)
-      
+
 
 
      }
@@ -79,11 +79,11 @@ enquiryQuestion: any
            this.enquiry=enquiry)
        })
 
-     
+
      }
-     public pageChanged(event:any):void{
-      this.config.currentPage=event;
-    }
-     
+    //  public pageChanged(event:any):void{
+    //   this.config.currentPage=event;
+    // }
+
 }
 
