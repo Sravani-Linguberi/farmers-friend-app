@@ -20,11 +20,7 @@ enquiryQuestion: any
   Answer: any
   config:any;
   constructor(private enquiryService : EnquiryService  , private contactUsService : ContactUsService) {
-    this.config={
-      itemsPerPage:1,
-      currentPage:1,
-      totalItems:Object.keys(this.enquiryQuestion).length
-    }
+    
    }
   
 
@@ -81,9 +77,7 @@ enquiryQuestion: any
 
      
      }
-     public pageChanged(event:any):void{
-      this.config.currentPage=event;
-    }
+     
      
 }
 
