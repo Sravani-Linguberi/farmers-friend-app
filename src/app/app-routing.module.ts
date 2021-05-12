@@ -22,6 +22,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { AuthGuard } from './guard/auth.guard';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
 import { combineAll } from 'rxjs/operators';
+import { VisualizationComponent } from './components/visualization/visualization.component';
 
 const routes: Routes = [
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   {path: 'contactUs' , component : ContactUsComponent},
   {path : 'enquiry' , component : EnquiryComponent , canActivate:[AuthGuard]} ,
   {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path:'visuals', component:VisualizationComponent}
 
 
 ];
