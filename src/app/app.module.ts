@@ -42,6 +42,8 @@ import { PostSoilComponent } from './posts/post-soil/post-soil.component';
 import { PostMandiComponent } from './posts/post-mandi/post-mandi.component';
 import { CropComponent } from './crop/crop.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { VisualizationComponent } from './components/visualization/visualization.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +71,9 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
     PostMandiComponent,
     AddressComponent,
     CropComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    VisualizationComponent,
+    ChatbotComponent
    ],
   imports: [
     BrowserModule,

@@ -33,7 +33,7 @@ public pageChanged(event:any):void{
 
 public getDataFromAPI(){
 
-  this.soilSchema.getsoilSchema("bihar").subscribe(
+  this.soilSchema.getsoilSchema().subscribe(
     (res) =>{
 
       this.records = res ;

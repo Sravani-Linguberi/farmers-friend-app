@@ -36,7 +36,7 @@
         <div class="horizontal-list nav-menu  navbar navbar-expand-lg navbar-light " style="margin-left: 30% ;  "  >
           <li>
             <span *ngIf="authService.authenticate()">
-                            HI you are log-in
+                            <!-- HI you are log-in -->
             </span>
            <h5> <a  (click)="signOutUser()" *ngIf="authService.authenticate()">
               sign-out
@@ -57,19 +57,18 @@
            <h5> <a class="nav-link"  href="admin">Admin</a></h5>
           </li>
           <li>
-            <a class="nav-link"  href="admin">Admin</a>
+             <a class="nav-link"  href="admin">Admin</a>
            </li>
           <div class="header-right">
 
-            <label *ngIf="authService.authenticate()">You're in!</label>
+            <!-- <label *ngIf="authService.authenticate()">You're in!</label>
               <button type="button" class="btn btn-danger" style="cursor: pointer;" (click)="signOutUser()" *ngIf="authService.authenticate()">
                 sign-out
-              </button>
-            <button class="btn " *ngIf="!authService.authenticate()"> <a href="login">Login</a> </button>
-            <button class="btn" *ngIf="!authService.authenticate()"><a href="register">Signup</a></button>
-            <button class="btn" id="contact"><a href="contact">Contact us</a></button>
-            <button class="btn" id="admin"*ngIf="!authService.authenticate()"><a href="admin">Admin</a></button>
-
+              </button> -->
+             <!-- <button class="btn " *ngIf="!authService.authenticate()"> <a href="login">Login</a> </button>
+            <button class="btn" *ngIf="!authService.authenticate()"><a href="register">Signup</a></button> -->
+               <!-- <button class="btn" id="contact"><a href="contact">Contact us</a></button>
+            <button class="btn" id="admin"*ngIf="!authService.authenticate()"><a href="admin">Admin</a></button> -->
 
 
           </div>
