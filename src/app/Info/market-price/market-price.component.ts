@@ -36,7 +36,7 @@ public getDataFromAPI(){
     (res) =>{
 
       this.data = res ;
-      this.records = this.data.records ;
+      this.records = this.data[0].records ;
       this.totalRecords = res.length  ;
       this.filterData = this.records.filter(el=>el.state == "Gujarat")
 
@@ -49,6 +49,7 @@ public getDataFromAPI(){
 }
 
   ngOnInit(): void {
+    this.getDataFromAPI()
 
   }
 
@@ -58,18 +59,19 @@ public getDataFromAPI(){
     var query = "Gujarat"
     query = value.value ;
     //var value = "bihar";
+    console.log(query)
       this.filterData = this.records.filter(el=>el.state == query)
-      console.log(this.filterData)
-  //   this.InfoService.getData(query).subscribe(
-  //   (res) =>{
+     console.log(this.filterData)
+    this.InfoService.getData(query).subscribe(
+    (res) =>{
 
-  //     this.data = res ;
-  //     console.log(this.data)
-  //   },
-  //   (err)=>{
-  //     console.log(err);
-  //   }
-  // )
+      this.data = res ;
+      console.log(this.data)
+    },
+    (err)=>{
+      console.log(err);
+    }
+  )
 }
 
 
