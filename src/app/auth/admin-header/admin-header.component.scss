@@ -94,4 +94,13 @@ nav {
         color: bisque;
       }
     }
+
+  }
+  .nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+  }
+
+  .nav-menu li a:hover {
+    color: red;
+    border-bottom: 1px solid black;
   }
