@@ -1,23 +1,3 @@
-// .home {
-//   width: 80%;
-//   margin: 50px;
-//   text-align: center;
-//   padding: 20px;
-
-// }
-// .container {
-//   border-radius: 5px;
-//   background-color: #f2f2f2;
-//   padding: 50px;
-//   background-image: url("../../../assets/images/contact.jpg");
-//   image-resolution: 1700px;
-//   width: 95%;
-
-// }
-// img{
-//   height: 450px;
-//   width: 900px;
-// }
 
 //ankit code
 
@@ -121,13 +101,16 @@ section:nth-child(2n + 1) {
   background-color: white;
 }
 
-.section-heading {
+.skills__section-heading {
   width: auto;
   padding: 20px 10px 10px;
   font-weight: 400;
+  margin-left: 85%
 }
-
-.section-heading span {
+.education__heading{
+  margin-left: 78%;
+}
+.skills__section-heading span {
   font-size: 40px;
   color: #2857a4;
   display: inline-block;
@@ -139,12 +122,19 @@ section:nth-child(2n + 1) {
 
 /*About Section*/
 
-#about {
+.Agriculture{
   height: auto;
   width: 100%;
   position: relative;
   margin-bottom: 30px;
 }
+.about {
+  height: auto;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
 
 #my-image {
   height: 12rem;
@@ -161,7 +151,7 @@ section:nth-child(2n + 1) {
   box-shadow: 1px 1px 10px 2px lightgrey;
 }
 
-#about-para {
+.Agriculture__para{
     padding: 10px;
   width: 70%;
   text-align: justify;
@@ -169,6 +159,33 @@ section:nth-child(2n + 1) {
   line-height: 28px;
   font-size: 1.1rem;
   margin-top: 5%;
+}
+.education__about-para{
+  padding: 10px;
+width: 70%;
+text-align: justify;
+color: grey;
+line-height: 28px;
+font-size: 1.1rem;
+margin-top: 5%;
+}
+.experience__about-para{
+  padding: 10px;
+width: 70%;
+text-align: justify;
+color: grey;
+line-height: 28px;
+font-size: 1.1rem;
+margin-top: 5%;
+}
+.skills__about-para {
+  padding: 10px;
+width: 70%;
+text-align: justify;
+color: grey;
+line-height: 28px;
+font-size: 1.1rem;
+margin-top: 5%;
 }
 
 
@@ -318,7 +335,7 @@ section:nth-child(2n + 1) {
 
 /* Portfolio Section */
 
-#portfolio-container {
+.portfolio-container {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -550,6 +567,5 @@ button:focus {
 
   height: 25%;
   width: 25%;
-  // margin-top: 10%;
   float: left;
 }
