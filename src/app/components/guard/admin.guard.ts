@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router} from '@angular/router';
 
-import { RegisterService } from '../register.service';
+import { RegisterService } from '../../register.service';
 import { map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,9 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AdminGuard implements CanActivate {
- 
+
   constructor(private authService:RegisterService, private router:Router){}
- 
+
   canActivate():boolean{
     if(this.authService.authenticate()){
       return true;
@@ -25,6 +25,6 @@ export class AdminGuard implements CanActivate {
     }
 
   }
-  
+
 }
 

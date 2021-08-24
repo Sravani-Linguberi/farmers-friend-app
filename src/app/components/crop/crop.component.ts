@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CropSchemaService } from '../crop-schema.service';
+import { CropSchemaService } from '../../crop-schema.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-crop',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoService } from '../../Info/market-price/info.service';
+import { InfoService } from '../market-price/info.service';
 import { Chart, registerables } from 'node_modules/chart.js';
 
 @Component({

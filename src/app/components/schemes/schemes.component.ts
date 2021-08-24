@@ -1,4 +1,4 @@
-import { SchemesService } from './../schemes.service';
+import { SchemesService } from '../../schemes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

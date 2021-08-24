@@ -1,4 +1,4 @@
-import { OtpService } from './../../Info/market-price/otp.service';
+import { OtpService } from '../../components/market-price/otp.service';
 //import { register } from './../../register';
 //import { RegisterService } from './../../login.service';
 import { RegisterService } from './../../register.service';

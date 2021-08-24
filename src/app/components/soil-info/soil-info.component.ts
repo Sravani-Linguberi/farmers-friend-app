@@ -1,5 +1,5 @@
-import { SoilSchemaService } from './../../soil-schema.service';
-import { soilSchema } from './../../soilSchema';
+import { SoilSchemaService } from '../../soil-schema.service';
+import { soilSchema } from '../../soilSchema';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

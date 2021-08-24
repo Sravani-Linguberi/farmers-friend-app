@@ -1,4 +1,4 @@
-import { AdminService } from './../../admin.service';
+import { AdminService } from '../../admin.service';
 import { Component, OnInit } from '@angular/core';
 import{admin} from '../../admin';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';

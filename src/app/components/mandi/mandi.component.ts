@@ -1,24 +1,22 @@
-import { HelplinesService } from './../helplines.service';
+import { MandiService } from '../../mandi.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-helplines',
-  templateUrl: './helplines.component.html',
-  styleUrls: ['./helplines.component.scss']
+  selector: 'app-mandi',
+  templateUrl: './mandi.component.html',
+  styleUrls: ['./mandi.component.scss']
 })
-export class HelplinesComponent implements OnInit {
+export class MandiComponent implements OnInit {
 
 
-  helplines:any;
   config:any;
-  public title = "HELPLINE NUMBERS " ;
-  details :any
+   public title = "MANDI " ;
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;
   page : number = 1 ;
   filterData:any[] =[];
-  constructor(private helplineService : HelplinesService) {
+  constructor(private mandiSchema : MandiService) {
   this.getDataFromAPI()
 
   this.config={
@@ -35,7 +33,7 @@ public pageChanged(event:any):void{
 
 
 public getDataFromAPI(){
-  this.helplineService.gethelplineSchema().subscribe(
+  this.mandiSchema.getmandiSchema().subscribe(
     (res) =>{
 
       this.records = res ;
@@ -76,5 +74,5 @@ public getDataFromAPI(){
 //   // )
 // }
 
-}
 
+}
