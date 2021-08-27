@@ -1,17 +1,17 @@
-.switch {
+.container__switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
   }
 
-  .switch input {
+  .container__switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
 
-  .slider {
+  .container__slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -23,7 +23,7 @@
     transition: .4s;
   }
 
-  .slider:before {
+  .container__slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -35,25 +35,25 @@
     transition: .4s;
   }
 
-  input:checked + .slider {
+  input:checked + .container__slider {
     background-color: #2196F3;
   }
 
-  input:focus + .slider {
+  input:focus + .container__slider{
     box-shadow: 0 0 1px #2196F3;
   }
 
-  input:checked + .slider:before {
+  input:checked + .container__slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
 
   /* Rounded sliders */
-  .slider.round {
+  .container__slider.round {
     border-radius: 34px;
   }
 
-  .slider.round:before {
+  .container__slider.round:before {
     border-radius: 50%;
   }

@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 //import { register } from './../../register';
 import { Component, Input, OnInit } from '@angular/core';
-import { RegisterService } from 'src/app/register.service';
+
 
 
 
@@ -10,19 +10,19 @@ import { RegisterService } from 'src/app/register.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 @Input() public carousel:any
-  constructor(public authService: RegisterService,private router:Router) { }
+  // constructor(public authService: RegisterService,private router:Router) { }
    @Input() public title : string = "";
 
 
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
   signOutUser(){
     localStorage.removeItem('token')
-    this.router.navigate(['/login'])
+    // this.router.navigate(['/login'])
   }
 
 

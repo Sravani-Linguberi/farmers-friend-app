@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
-export class ContactUsComponent implements OnInit {
+export class ContactUsComponent {
 
   contactus:any
   Fullname: any
@@ -21,8 +21,8 @@ export class ContactUsComponent implements OnInit {
 
 
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
 
   addcontacUs(){

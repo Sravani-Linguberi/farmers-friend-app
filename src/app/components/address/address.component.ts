@@ -3,34 +3,27 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-address',
   templateUrl: './address.component.html',
-  styleUrls: ['./address.component.scss']
+  styleUrls: ['./address.component.scss'],
 })
-export class AddressComponent implements OnInit {
+export class AddressComponent {
   public soil = true;
   public mandi = false;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-  showSoil(){
-    console.log(this.soil)
-    if(this.soil){
+  // ngOnInit(): void {
+  // }
+  showSoil() {
+    if (this.soil) {
       this.soil = false;
+    } else {
+      this.soil = true;
     }
-    else{
-      this.soil =true;
-    }
-    
   }
-  showMandi(){
-    if(this.mandi){
+  showMandi() {
+    if (this.mandi) {
       this.mandi = false;
+    } else {
+      this.mandi = true;
     }
-    else{
-      this.mandi =true;
-    }
-    
-
   }
-
 }

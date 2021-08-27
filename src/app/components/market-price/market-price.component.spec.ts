@@ -1,3 +1,6 @@
+import { FooterComponent } from './../footer/footer.component';
+import { HeaderComponent } from './../header/header.component';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MarketPriceComponent } from './market-price.component';
@@ -8,7 +11,7 @@ describe('MarketPriceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MarketPriceComponent ]
+      declarations: [ MarketPriceComponent,HeaderComponent,FooterComponent ]
     })
     .compileComponents();
   });

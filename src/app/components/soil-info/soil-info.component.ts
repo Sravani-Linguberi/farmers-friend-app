@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './soil-info.component.html',
   styleUrls: ['./soil-info.component.scss']
 })
-export class SoilInfoComponent implements OnInit {
+export class SoilInfoComponent{
   config:any;
   title = "Market-Price-Info" ;
    data : any ;
@@ -50,9 +50,9 @@ public getDataFromAPI(){
   )
 }
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
 
-  }
+  // }
 
 
   sortData(){

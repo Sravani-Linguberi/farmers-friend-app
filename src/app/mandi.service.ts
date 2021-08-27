@@ -12,11 +12,8 @@ export class MandiService {
   constructor(private httpclient : HttpClient) { }
 
   getmandiSchema(){
-
-
-    return this.httpclient.get<any>(`http://localhost:3000/api/mandischema`)
-
-  }
+ return this.httpclient.get<any>(`http://localhost:3000/api/mandischema`)
+ }
 
   addMandi(newmandi:any)
 {

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './helplines.component.html',
   styleUrls: ['./helplines.component.scss']
 })
-export class HelplinesComponent implements OnInit {
+export class HelplinesComponent{
 
 
   helplines:any;
@@ -39,10 +39,6 @@ public getDataFromAPI(){
     (res) =>{
 
       this.records = res ;
-      // this.records = this.data.records ;
-      // this.totalRecords = res.length  ;
-      // this.filterData = this.records.filter(el=>el.state == "Gujarat")
-
 
     },
     (err:any)=>{
@@ -52,29 +48,9 @@ public getDataFromAPI(){
   )
 }
 
-  ngOnInit(): void {
-
-  }
 
 
-//   sortData(){
-//     var value = document.getElementById("sortBy") as HTMLSelectElement ;
-//     var query = "Gujarat"
-//     query = value.value ;
-//     //var value = "bihar";
-//       this.filterData = this.records.filter(el=>el.state == query)
-//       console.log(this.filterData)
-//   //   this.InfoService.getData(query).subscribe(
-//   //   (res) =>{
 
-//   //     this.data = res ;
-//   //     console.log(this.data)
-//   //   },
-//   //   (err)=>{
-//   //     console.log(err);
-//   //   }
-//   // )
-// }
 
 }
 

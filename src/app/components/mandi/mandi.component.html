@@ -1,24 +1,24 @@
 
  <main>
 
-  <section id="about">
-         <div id="about-para">
-      <h1> CURRENTLY AVAILABLE MANDI'S</h1>
+  <section class="mandi">
+         <div class="mandi-para">
+      <h1 class="mandi__heading"> Currently Avaliable Mandi's</h1>
       <hr >
 
         </div>
         </section>
-          <div id="about-para">
 
+<div class="wrapper">
         <table class="table table-striped">
-        <thead>
+        <thead class="wrapper__head">
           <tr>
 
             <th scope="col" sortable="name">STATE</th>
              <th scope="col" sortable="area">DISTRICT</th>
             <th scope="col" sortable="population">MARKET</th>
             <th scope="col" sortable="population">GODOWN</th>
-            <th scope="col" sortable="population">ACOLDSTORAGE</th>
+             <!-- <th scope="col" sortable="population">ACOLDSTORAGE</th> -->
             <th scope="col" sortable="population">RAILWAY</th>
             <th scope="col" sortable="population">DISTANCE</th>
             <th scope="col" sortable="population">CROPS</th>
@@ -29,6 +29,7 @@
 
           </tr>
           </thead>
+
           <tbody>
           <tr *ngFor="let d of records|paginate: config" >
             <th scope="row">{{ d.STATE}}</th>
@@ -36,7 +37,7 @@
             <td>{{ d.MARKET}}</td>
 
             <td>{{ d.GODOWN}}</td>
-            <td>{{ d.COLDSTORAGE}}</td>
+            <!-- <td>{{ d.COLDSTORAGE}}</td> -->
             <td>{{ d.RAILWAY}}</td>
             <td>{{ d.DISTANCE}}</td>
             <td>{{ d.CROPS}}</td>
@@ -46,12 +47,12 @@
           </tr>
           </tbody>
         </table>
-
+      </div>
       <div style="text-align: center; color: black; margin-top: 5px;">
        <pagination-controls  (pageChange)="pageChanged($event)"></pagination-controls>
      </div>
 
-</div>
+
 </main>
 
 

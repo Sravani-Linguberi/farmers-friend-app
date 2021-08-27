@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './schemes.component.html',
   styleUrls: ['./schemes.component.scss']
 })
-export class SchemesComponent implements OnInit {
+export class SchemesComponent{
 
   public title ="GOVERNMENT SCHEMES FOR AGRICULTURE" ;
   config:any;
@@ -20,7 +20,7 @@ export class SchemesComponent implements OnInit {
   this.getDataFromAPI()
 
   this.config={
-    itemsPerPage:18,
+    itemsPerPage:5,
     currentPage:1,
     totalItems:this.records.length
 
@@ -50,9 +50,9 @@ public getDataFromAPI(){
   )
 }
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
 
-  }
+  // }
 
 
 //   sortData(){
