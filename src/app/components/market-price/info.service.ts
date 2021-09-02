@@ -9,7 +9,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 export class InfoService {
 
   constructor(private HttpClient : HttpClient ) { }
-  
+
 
   public getData(query:string):Observable<any[]>{
     return this.HttpClient.get<any[]>(`http://localhost:3000/api/market`).pipe(
@@ -22,7 +22,7 @@ export class InfoService {
   // getMarketPrice(){
   //   return this.HttpClient.get<any>(`http://localhost:3000/api/market`)
   // }
-  
+
 
 }
 

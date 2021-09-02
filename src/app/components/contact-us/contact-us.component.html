@@ -1,33 +1,46 @@
-<app-header></app-header>
-<div class="container">
-    <h2 class="conatiner__page-header">CONTACT US</h2>
-    <form>
-      <div class="form-group">
-        <label>FULLNAME</label>
-        <input type="text"  [(ngModel)]="Fullname" name="Fullname" class="form-control" required>
+
+  <main>
+    <app-header></app-header>
+    <body>
+      <div class="container">
+          <form [formGroup]="contactForm">
+              <ul>
+                  <li>
+                      <label  id="fname" for="search"><span>Fullname<span class="container__required-star">*</span></span></label>
+                      <input type="text" id="search" [formControl]="Fullname" name="Fullname">
+                      <div class="container__invalid">
+                        <span [hidden]="Fullname.valid || Fullname.untouched">
+                          <span [hidden]="!Fullname.hasError('required')" class="container__required">This field is required</span>
+                          <span [hidden]="!Fullname.hasError('minlength')" class="container__required">Minimum length should be 3</span>
+                        </span>
+                      </div>
+                  </li>
+                  <li>
+                      <label for="topic"><span>Topic<span class="container__required-star">*</span></span></label>
+                      <input type="text" [formControl]="Topic" id="topic" name="Topic">
+                      <div class="container__invalid">
+                        <span [hidden]="Topic.valid || Topic.untouched">
+                          <span [hidden]="!Topic.hasError('required')" class="container__required">This field is required</span>
+                          <span [hidden]="!Topic.hasError('minlength')" class="container__required">Minimum length should be 5</span>
+                        </span>
+                      </div>
+                  </li>
+                  <li>
+                      <label for="details" ><span>Details<span class="container__required-star">*</span></span></label>
+                      <textarea [formControl]="Details" name="Details" rows="4" id="details" cols="50"></textarea>
+                      <div class="container__invalid">
+                        <span [hidden]="Details.valid || Details.untouched">
+                          <span [hidden]="!Details.hasError('required')" class="container__required">This field is required</span>
+                          <span [hidden]="!Details.hasError('minlength')" class="container__required">Minimum length should be 15</span>
+                        </span>
+                      </div>
+                  </li>
+                  <li>
+                      <button type="submit"  (click)=" addcontacUs()" [disabled]="contactForm.invalid">Submit</button>
+                  </li>
+              </ul>
+          </form>
       </div>
-      <div class="form-group">
-        <label>TOPIC</label>
-        <!-- <input type="text"  [(ngModel)]="Topic" name="Topic" class="form-control" required> -->
-        <select class="form-select optionSector" id="topic" [(ngModel)]="Topic" name="Topic" aria-label="Default select example"  >
-          <option class="dropdown-item" value="soil lab" style="color: black;">soil lab</option>
-          <option class="dropdown-item" value="Mandi" style="color: black;">Mandi</option>
-          <option class="dropdown-item" value="Crop" style="color: black;">Crop</option>
-          <option class="dropdown-item" value="Helpline" style="color: black;">Helpline</option>
-        </select>
-
-      </div>
-       <br><br>
-       <div class="form-group">
-        <label>DETAILS</label>
-        <input type="text"  [(ngModel)]="Details" name="Details" class="form-control" required>
-      </div>
-
-
-      <a type="submit" class="btn btn-primary" value="Add"  (click)="addcontacUs()" href="contactUs">SUBMIT</a>
-
-     </form>
-  </div>
-
-  <hr>
+  </body>
 <app-footer></app-footer>
+</main>

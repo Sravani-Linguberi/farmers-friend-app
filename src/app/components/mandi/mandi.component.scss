@@ -47,10 +47,8 @@ div.wrapper {
   font-style: bold;
   font-weight: 500;
 }
-table th {
-  position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
+table th{
   position: sticky;
-  top: 0;
-  z-index: 10; // any positive value, layer order is global
-  // background: #fff;
+     top: 0;
+     background-color: #FFF;
 }

@@ -1,7 +1,7 @@
 
 
 
-import { ContactUsService } from './contact-us.service';
+
 import { MandiService } from './mandi.service';
 import { SchemesComponent } from './components/schemes/schemes.component';
 import { HelplinesComponent } from './components/helplines/helplines.component';
@@ -18,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,7 +33,9 @@ import { SoilInfoComponent } from './components/soil-info/soil-info.component';
 
 import { MandiComponent } from './components/mandi/mandi.component';
 import { AddressComponent } from './components/address/address.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 // import { SoilComponent } from './posts/soil/soil.component';
+
 
 
 
@@ -45,7 +47,7 @@ import { AddressComponent } from './components/address/address.component';
     AppComponent,
 
     HomePageComponent,
-    ContactUsComponent,
+
     HeaderComponent,
     FooterComponent,
     MarketPriceComponent,
@@ -60,6 +62,7 @@ import { AddressComponent } from './components/address/address.component';
     AddressComponent,
 
     AddressComponent,
+    ContactUsComponent
 
 
 
@@ -85,7 +88,7 @@ import { AddressComponent } from './components/address/address.component';
 
 
                HelplinesService, SchemesService ,SoilSchemaService , MandiService,
-               HelplinesService, SchemesService ,SoilSchemaService , MandiService, ContactUsService],
+               HelplinesService, SchemesService ,SoilSchemaService , MandiService],
 
   bootstrap: [AppComponent]
 })

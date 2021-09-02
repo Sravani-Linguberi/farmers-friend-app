@@ -1,3 +1,4 @@
+<main>
 <app-header [title]="title"></app-header>
 <section class="about">
   <div class="about__para">
@@ -21,7 +22,7 @@
     </p>
     <hr />
 
-    <select
+    <!-- <select
       class="form-select optionSector"
       id="sortBy"
       aria-label="Default select example"
@@ -63,15 +64,16 @@
       <option value="Uttaranchal">Uttaranchal</option>
       <option value="Uttar Pradesh">Uttar Pradesh</option>
       <option value="West Bengal">West Bengal</option>
-    </select>
-    <button
+    </select> -->
+    <!-- <button
       type="button"
       (click)="sortData()"
       class="btn btn-primary btn-sm"
       style="border: 2px solid black; margin-left: 2px"
     >
       Submit
-    </button>
+    </button> -->
+    <br>
 <div class="wrapper">
     <table class="table table-striped">
       <thead>
@@ -88,7 +90,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let d of filterData | paginate: config">
-          <th scope="row">{{ d.state }}</th>
+          <td scope="row">{{ d.state }}</td>
           <td>{{ d.district }}</td>
           <td>{{ d.market }}</td>
           <td>{{ d.commodity }}</td>
@@ -109,3 +111,4 @@
 </section>
 
 <app-footer></app-footer>
+</main>

@@ -9,7 +9,7 @@ import { SchemesComponent } from './components/schemes/schemes.component';
 import { HelplinesComponent } from './components/helplines/helplines.component';
 import { SoilInfoComponent } from './components/soil-info/soil-info.component';
 
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
+ import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MarketPriceComponent } from './components/market-price/market-price.component';
@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
 
 
-  {path: 'contactUs' , component : ContactUsComponent},
+  // {path: 'contactUs' , component : ContactUsComponent},
 
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 

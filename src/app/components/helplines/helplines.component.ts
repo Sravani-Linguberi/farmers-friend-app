@@ -11,8 +11,9 @@ export class HelplinesComponent{
 
   helplines:any;
   config:any;
-  public title = "HELPLINE NUMBERS " ;
+  public title:String = "HELPLINE NUMBERS" ;
   details :any
+
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;
@@ -41,9 +42,9 @@ public getDataFromAPI(){
       this.records = res ;
 
     },
-    (err:any)=>{
-      console.log(err);
-    }
+    // (err:any)=>{
+    //   // console.log(err);
+    // }
 
   )
 }

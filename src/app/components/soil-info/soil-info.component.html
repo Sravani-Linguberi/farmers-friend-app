@@ -17,13 +17,13 @@
     <thead>
       <tr>
 
-        <th scope="col" sortable="name">STATE</th>
+         <th scope="col" sortable="name">STATE</th>
         <th scope="col" sortable="area">DISTRICT</th>
         <th scope="col" sortable="population">OFFICE_NAME</th>
         <th scope="col" sortable="population">OFFICE_ADDRESS</th>
         <th scope="col" sortable="population">NO_OF_STAFF</th>
         <th scope="col" sortable="population">EMAIL</th>
-        <th scope="col" sortable="population">TELEPHONE</th>
+        <!-- <th scope="col" sortable="population">TELEPHONE</th> -->
         <th scope="col" sortable="population">SOIL EQUIPMENT</th>
 
 
@@ -32,13 +32,13 @@
       </thead>
       <tbody>
       <tr *ngFor="let d of records|paginate: config" >
-        <th scope="row">{{ d.STATE}}</th>
+        <td scope="row">{{ d.STATE}}</td>
         <td>{{ d.dist}}</td>
         <td>{{ d.Office_Name}}</td>
         <td>{{ d.Office_Address}}</td>
         <td>{{ d.No_of_Staff}}</td>
         <td>{{ d.Email}}</td>
-        <td>{{ d.TelePhone}}</td>
+        <!-- <td>{{ d.TelePhone}}</td> -->
         <td>{{ d.Soil_Equipment}}</td>
 
 

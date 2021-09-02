@@ -20,10 +20,7 @@ export class HeaderComponent {
   // ngOnInit() {
   // }
 
-  signOutUser(){
-    localStorage.removeItem('token')
-    // this.router.navigate(['/login'])
-  }
+
 
 
 

@@ -43,9 +43,9 @@ public getDataFromAPI(){
 
 
     },
-    (err:any)=>{
-      console.log(err);
-    }
+    // (err:any)=>{
+    //   console.log(err);
+    // }
 
   )
 }

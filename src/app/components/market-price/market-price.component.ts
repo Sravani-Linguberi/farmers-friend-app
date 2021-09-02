@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./market-price.component.scss']
 })
 export class MarketPriceComponent implements OnInit {
+  [x: string]: any;
 
   public title ="MARKET-INFORMATION"
   config:any;
@@ -41,9 +42,9 @@ public getDataFromAPI(){
       this.filterData = this.records.filter(el=>el.state == "Gujarat")
 
     },
-    (err:any)=>{
-      console.log(err);
-    }
+    // (err:any)=>{
+    //   console.log(err);
+    // }
 
   )
 }
@@ -54,25 +55,25 @@ public getDataFromAPI(){
   }
 
 
-  sortData(){
-    var value = document.getElementById("sortBy") as HTMLSelectElement ;
-    var query = "Gujarat"
-    query = value.value ;
-    //var value = "bihar";
-    console.log(query)
-      this.filterData = this.records.filter(el=>el.state == query)
-     console.log(this.filterData)
-    this.InfoService.getData(query).subscribe(
-    (res) =>{
+//   sortData(){
+//     var value = document.getElementById("sortBy") as HTMLSelectElement ;
+//     var query = "Gujarat"
+//     query = value.value ;
+//     //var value = "bihar";
+//     console.log(query)
+//       this.filterData = this.records.filter(el=>el.state == query)
+//      console.log(this.filterData)
+//     this.InfoService.getData(query).subscribe(
+//     (res) =>{
 
-      this.data = res ;
-      console.log(this.data)
-    },
-    (err)=>{
-      console.log(err);
-    }
-  )
-}
+//       this.data = res ;
+//       console.log(this.data)
+//     },
+//     // (err)=>{
+//     //   console.log(err);
+//     // }
+//   )
+// }
 
 
 }

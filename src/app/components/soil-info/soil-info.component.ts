@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoilInfoComponent{
   config:any;
-  title = "Market-Price-Info" ;
+  title:string = "Market-Price-Info" ;
    data : any ;
   records: any[] = [] ;
   totalRecords : any ;
@@ -43,9 +43,9 @@ public getDataFromAPI(){
 
 
     },
-    (err:any)=>{
-      console.log(err);
-    }
+    // (err:any)=>{
+    //   console.log(err);
+    // }
 
   )
 }
@@ -55,25 +55,25 @@ public getDataFromAPI(){
   // }
 
 
-  sortData(){
-    var value = document.getElementById("sortBy") as HTMLSelectElement ;
-    var query = "Gujarat"
-    query = value.value ;
-    this.soilSchema.getsoilSchema().subscribe(
-      (res) =>{
+  // sortData(){
+  //   var value = document.getElementById("sortBy") as HTMLSelectElement ;
+  //   var query = "Gujarat"
+  //   query = value.value ;
+  //   this.soilSchema.getsoilSchema().subscribe(
+  //     (res) =>{
 
-        this.records = res ;
+        // this.records = res ;
         // this.records = this.data.records ;
         // this.totalRecords = res.length  ;
         // this.filterData = this.records.filter(el=>el.state == "Gujarat")
 
 
-      },
-      (err:any)=>{
-        console.log(err);
-      }
+      // },
+      // (err:any)=>{
+      //   console.log(err);
+      // }
 
-    )
+    // )
 
-}
+// }
 }

@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./address.component.scss'],
 })
 export class AddressComponent {
-  public soil = true;
-  public mandi = false;
-  constructor() {}
+   public soil:boolean = true;
+  public mandi:boolean = false;
+  // constructor() {}
 
   // ngOnInit(): void {
   // }

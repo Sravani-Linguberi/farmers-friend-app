@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HelplinesService {
-  push(helplines: any) {
-    throw new Error('Method not implemented.');
-  }
+  //  push(helplines: any) {
+  //     throw new Error('Method not implemented.');
+  // }
 
   constructor(private httpclient: HttpClient) { }
 
@@ -18,9 +18,11 @@ export class HelplinesService {
     return this.httpclient.get<any>(`http://localhost:3000/api/HelplineSchema`)
   }
 
-  addhelplines(newhelplines:any)
-{
-  var headers= new HttpHeaders();
-  headers.append('helplines-type' , 'application/json ');
-  return this.httpclient.post<any>('http://localhost:3000/api/HelplineSchema', newhelplines,{headers:headers})
-}}
+//   addhelplines(newhelplines:any)
+// {
+//   var headers= new HttpHeaders();
+//   headers.append('helplines-type' , 'application/json ');
+//   return this.httpclient.post<any>('http://localhost:3000/api/HelplineSchema', newhelplines,{headers:headers})
+// }
+
+}

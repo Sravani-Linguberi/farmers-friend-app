@@ -1,47 +1,41 @@
-import { ContactUsService } from './../../contact-us.service';
+
+import { FormGroup,FormControl,Validators,FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-// import "../../../assets/images/contact.jpeg"
+
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
-export class ContactUsComponent {
+export class ContactUsComponent implements OnInit {
 
-  contactus:any
-  Fullname: any
-  Topic:any
-  Details: any
+ Fullname=new FormControl('',[Validators.required,Validators.minLength(3)]);
+    Topic=new FormControl('',[Validators.required,Validators.minLength(5)]);
+    Details=new FormControl('',[Validators.required,Validators.minLength(15)])
+contactForm:FormGroup
 
-
-
-
-  constructor(private contactUsService: ContactUsService) { }
-
-
-
-  // ngOnInit(): void {
-  // }
-
-
-  addcontacUs(){
-    console.log(this.Topic)
-  const contactus = {
-
-
-    Fullname:this.Fullname ,
-    Topic:this.Topic ,
-    Details: this.Details ,
+  constructor(private fb: FormBuilder) {
+    this.contactForm=this.fb.group(
+      {
+    Fullname:this.Fullname,
+    Topic:this.Topic,
+    Details:this.Details
+      }
+    )
   }
-     this.contactUsService.addcontacUs(contactus)
-     .subscribe(contactus =>{
-       this.contactUsService.push(contactus);
-       this.contactUsService.getcontactUs()
-       .subscribe(contactus =>
-         this.contactus=contactus)
-     })
+  
+  ngOnInit(): void {
 
-   alert("Your details added Successfully")
-   }
+  }
+
+addcontacUs(){
+  // console.log(this.contactForm)
+  this.contactForm.reset();
+  alert('Your details added Successfully')
+
+      }
+
+
+
 }

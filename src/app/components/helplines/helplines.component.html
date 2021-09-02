@@ -28,7 +28,7 @@
 
         <tbody>
           <tr *ngFor="let d of records | paginate:config">
-            <th scope="row">{{ d.details }}</th>
+            <td scope="row">{{ d.details }}</td>
             <td>{{ d.title }}</td>
           </tr>
         </tbody>
@@ -38,6 +38,7 @@
       <div class="pagination">
         <pagination-controls
           (pageChange)="pageChanged($event)"
+         
         ></pagination-controls>
       </div>
     </div>
